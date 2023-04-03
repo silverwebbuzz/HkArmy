@@ -1,0 +1,5 @@
+Event Name *,Event Type *,Assessmet required *,Assessment Text,Cost Method,Event Money,Event Token,Event Money + Token,Date,Time
+1 Event,Activity,yes,Example,Money|Token|Money + Tokens,200|250,5|10,22  + 15|230 + 20,4/12/2022,9:00|11:00
+2 Event,Training,No,,Money,500,,,4/13/2022,9:00|12:00
+3 Event,Other,No,,Money,1000,,,4/14/2022,11:00|13:00
+4 Event,Activity,No,,Token,,50,,4/20/2022,12:00|13:00

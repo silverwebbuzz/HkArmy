@@ -24,6 +24,7 @@ use App\Http\Models\EilteModel;
 use App\Http\Models\Subteam;
 use App\Http\Controllers\AttendanceController;
 use Config;
+use Carbon\Carbon;
 use App\Http\Models\AssignProductOrder;
 
 class ExportController extends Controller
@@ -1428,4 +1429,17 @@ class ExportController extends Controller
     //         return response()->stream($callback, 200, $headers);
     //     }
     // }
+    public function exportHistory(Request $request) {
+        $location = 'uploads/export_files';
+        $currentDate = Carbon::now()->format('Y-m-d');
+        $userName = Session::get('user')['username'];
+        $name = $request->table . '_' . $userName . '_' . $currentDate . '.csv';
+        file_put_contents(public_path($location . '/' . $name . '.csv'), $request->data);
+        $postData = [
+            'user' => $userName,
+            'filename' => $name,
+            'link' => $request->url,
+        ];
+        Helper::exportAuditLogfuncation($postData, $request->table, 'Export');
+    }
 }

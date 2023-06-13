@@ -112,6 +112,7 @@
 												<th>{{ __('languages.member.English_name') }}</th>
 												<th>{{ __('languages.member.Chinese_name') }}</th>
 												<th>{{ __('languages.badge_member_list.reference_number') }}</th>
+												<th>{{ __('languages.badge_member_list.user_name') }}</th>
 												<th>{{ __('languages.badge_member_list.issue_date') }}</th>
                                                 <th>{{ __('languages.badge_member_list.assigned_date') }}</th>
 												<th>{{ __('languages.Status') }}</th>
@@ -139,6 +140,7 @@
 														<td>{{ $val->user->English_name ?? ''}}</td>
 														<td>{{ $val->user->Chinese_name ?? ''}}</td>
 														<td>{{$val->reference_number ?? ''}}</td>
+														<td> {{$val->user->UserName}}</td>
 														<td>{{ Helper::dateConvertDDMMYYY('-','/',$val->issue_date) ?? ''}}</td>
                                                         <td>{{ Helper::dateConvertDDMMYYY('-','/',$val->assigned_date) ?? ''}}</td>
 														@if($val->status == "active")

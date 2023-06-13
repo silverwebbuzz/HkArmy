@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+    <!-- BEGIN: Head-->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+        <meta name="description" content="Frest admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+        <meta name="keywords" content="admin template, Frest admin template, dashboard template, flat admin template, responsive admin template, web app">
+        <meta name="author" content="PIXINVENT">
+        <title>Edit Member - Scout - Bootstrap HTML admin template</title>
+        <link rel="apple-touch-icon" href="../app-assets/images/ico/S_blue.png">
+        <link rel="shortcut icon" type="image/x-icon" href="../app-assets/images/ico/favicon.ico">
+        <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
+        <!-- BEGIN: Vendor CSS-->
+        <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/vendors.min.css">
+        <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/tables/datatable/datatables.min.css">
+        <!-- END: Vendor CSS-->
+          <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/vendors.min.css">
+            <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/charts/apexcharts.css">
+            <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/extensions/dragula.min.css">
+             <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/pickers/pickadate/pickadate.css">
+            <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/pickers/daterange/daterangepicker.css">
+        <!-- BEGIN: Theme CSS-->
+        <link rel="stylesheet" type="text/css" href="../app-assets/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="../app-assets/css/bootstrap-extended.css">
+        <link rel="stylesheet" type="text/css" href="../app-assets/css/colors.css">
+        <link rel="stylesheet" type="text/css" href="../app-assets/css/components.css">
+        <link rel="stylesheet" type="text/css" href="../app-assets/css/themes/dark-layout.css">
+        <link rel="stylesheet" type="text/css" href="../app-assets/css/themes/semi-dark-layout.css">
+        <!-- END: Theme CSS-->
+        <!-- BEGIN: Page CSS-->
+        <link rel="stylesheet" type="text/css" href="../app-assets/css/core/menu/menu-types/vertical-menu.css">
+        <link rel="stylesheet" type="text/css" href="../app-assets/css/pages/page-users.css">
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/css/select2.min.css" rel="stylesheet" />
+        <!-- END: Page CSS-->
+        <!-- BEGIN: Custom CSS-->
+        <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <link rel="stylesheet" href="../assets/css/bootstrap-multiselect.css" type="text/css"/>
+        <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+        <!-- END: Custom CSS-->
+    </head>
+    <!-- END: Head-->
+    <!-- BEGIN: Body-->
+    <body class="vertical-layout vertical-menu-modern boxicon-layout no-card-shadow 2-columns  navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+        <!-- BEGIN: Header-->
+        <div class="header-navbar-shadow"></div>
+        <nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
+            <div class="navbar-wrapper">
+                <div class="navbar-container content">
+                    <div class="navbar-collapse" id="navbar-mobile">
+                        <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon bx bx-menu"></i></a></li>
+                            </ul>
+                        </div>
+                        <ul class="nav navbar-nav float-right">
+                            <li class="dropdown dropdown-language nav-item">
+                                <a class="dropdown-toggle nav-link" id="dropdown-flag" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="selected-language">中文 </span></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="../html/ch/add-user.html" data-language="en">中文 </a><a class="dropdown-item" href="../html/en/add-user.html" data-language="fr">English</a></div>
+                            </li>
+                            <li class="dropdown dropdown-user nav-item">
+                                <a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                    <div class="user-nav d-sm-flex d-none"><span class="user-name">John Doe</span><span class="user-status text-muted">在線</span></div>
+                                    <span><img class="round" src="../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right pb-0">
+                                    <a class="dropdown-item" href="page-user-profile.html"><i class="bx bx-user mr-50"></i> 編輯個人資料</a>
+                                    <a class="dropdown-item" href="auth-login.html"><i class="bx bx-power-off mr-50"></i> 登出</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- END: Header-->
+        <!-- BEGIN: Main Menu-->
+        <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+            <div class="navbar-header">
+                <ul class="nav navbar-nav flex-row">
+                    <li class="nav-item mr-auto">
+                        <a class="navbar-brand" href="../html/ch/index.html">
+                            <div class="brand-logo"><img class="logo" src="../app-assets/images/logo/S_blue.png" /></div>
+                            <h2 class="brand-text mb-0">香港青少年軍</h2>
+                        </a>
+                    </li>
+                    <!--  <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="bx bx-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon bx bx-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="bx-disc"></i></a></li> -->
+                </ul>
+            </div>
+            <div class="shadow-bottom"></div>
+            <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="">
+                <li class="nav-item"><a href="index.html"><i class="bx bx-home-alt"></i><span class="menu-title" data-i18n="Dashboard">儀表盤</span></a>
+                </li>
+                <li class="active nav-item"><a href="page-users-list.html"><i class="bx bx-user-plus"></i><span class="menu-title" data-i18n="User">團員</span></a>
+                </li>
+
+                <!--<li class=" nav-item"><a href="activity-management.html"><i class="bx bx-run"></i><span class="menu-title" data-i18n="Dashboard">活動管理</span></a>-->
+                <!--</li>-->
+                <li class="nav-item"><a href="event-management.html"><i class="bx bx-calendar-event"></i><span class="menu-title" data-i18n="Dashboard">活動管理</span></a>
+                    </li>
+                </li>
+                <li class=" nav-item"><a href="attendance.html"><i class="bx bxs-book-open"></i><span class="menu-title" data-i18n="Dashboard">考勤管理</span></a>
+                </li>
+                <li class=" nav-item"><a href="role-management.html"><i class="bx bx-user"></i></i><span class="menu-title" data-i18n="Dashboard">職能權限管理</span></a>
+                </li>
+                <li class="nav-item"><a href="#"><i class="bx bxs-user-detail"></i><span class="menu-title" data-i18n="User">制服換領/購買紀錄</span></a>
+                    <ul class="menu-content">
+                        <li><a href="product-list.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="List">產品</span></a>
+                        </li>
+                        <li><a href="purchase-product-list.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">添加產品購買</span></a>
+                        </li>
+                        <li><a href="product-list-card.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">Product List</span></a>
+                        </li>
+                        <li><a href="cart.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">Cart</span></a>
+                        </li>
+                        <li><a href="checkout.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">Checkout</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><i class="bx bxs-user-detail"></i><span class="menu-title" data-i18n="User">設置</span></a>
+                    <ul class="menu-content">
+                         <li class=" nav-item"><a href="team.html"><i class="bx bx-group"></i><span class="menu-title" data-i18n="Dashboard">縱隊</span></a>
+                        </li>
+                        <li class=" nav-item"><a href="rank.html"><i class="bx bx-group"></i><span class="menu-title" data-i18n="Dashboard">軍銜</span></a>
+                        </li>
+                        <li class=" nav-item"><a href="hour.html"><i class="bx bx-group"></i><span class="menu-title" data-i18n="Dashboard">時數</span></a>
+                        </li>
+                        <li class="nav-item"><a href="awards-badge.html"><i class="bx bx-trophy"></i><span class="menu-title" data-i18n="Dashboard">獎項</span></a></li>
+                        <li class="nav-item"><a href="badge.html"><i class="bx bx-trophy"></i><span class="menu-title" data-i18n="Dashboard">獎章</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+            </div>
+        </div>
+        <!-- END: Main Menu-->
+        <!-- BEGIN: Content-->
+        <div class="app-content content">
+            <div class="content-overlay"></div>
+            <div class="content-wrapper">
+                <div class="content-header row">
+                    <div class="content-header-left col-12 mb-2 mt-1">
+                        <div class="row">
+                            <div class="col-12">
+                                <h3 class="content-header-title float-left pr-1 mb-0">編輯會員</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-body new-user">
+                    <!-- users edit start -->
+                    <section class="users-edit">
+                        <div class="card">
+                            <div class="card-content">
+                                <div class="card-body">
+                                    <form action="index.html">
+                                        <div class="header pt-1 pb-1">
+                                            <h1 class="card-title title-cls"><b>基本資料</b></h1>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">團員編號</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="團員編號" value="1001" readonly="readonly">
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label for="users-list-role" class="text-bold-600">縱隊 <span class="required-cls">*</span></label>
+                                                <div class="mb-50 effective-date-cls">
+                                                    <input type="text" class="form-control pickadate" placeholder="生效日期">
+                                                </div>
+                                                <div class="mb-50">
+                                                    <fieldset class="form-group">
+                                                        <select class="form-control teamclass" id="users-list-role">
+                                                            <option value="0">無</option>
+                                                            <option value="1">教導</option>
+                                                            <option value="2">菁英</option>
+                                                            <option value="3">地區</option>
+                                                        </select>
+                                                    </fieldset>
+                                                    <div class="mb-50 speicalins-cls">
+                                                        <label class="text-bold-600" for="exampleInputUsername1">專項教官</label>
+                                                        <ul class="list-unstyled mb-0">
+                                                            <li class="d-inline-block mt-1 mr-1 mb-1">
+                                                                <fieldset>
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" class="custom-control-input" name="speiaclins" id="customRadio1" value="1">
+                                                                        <label class="custom-control-label" for="customRadio1">是</label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </li>
+                                                            <li class="d-inline-block my-1 mr-1 mb-1">
+                                                                <fieldset>
+                                                                    <div class="custom-control custom-radio">
+                                                                        <input type="radio" class="custom-control-input" name="speiaclins" id="customRadio2" value="2">
+                                                                        <label class="custom-control-label" for="customRadio2">否</label>
+                                                                    </div>
+                                                                </fieldset>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="mb-50 speicals-instructor-cls">
+                                                        <label class="text-bold-600" for="exampleInputUsername1">選項</label>
+                                                        <input type="text" class="form-control" id="Experience" placeholder="選項" value="">
+                                                    </div>
+                                                    <fieldset class="form-group elite-district-cls">
+                                                        <select class="form-control" id="users-list-role">
+                                                            <option value="">初級隊員</option>
+                                                            <option value="1">一級隊員</option>
+                                                            <option value="2">二級隊員</option>
+                                                            <option value="3">增減選項</option>
+                                                        </select>
+                                                    </fieldset>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="header pt-1 pb-1">
+                                            <h1 class="card-title title-cls title-cls"><b>軍銜 </b><span class="required-cls">*</span></h1>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">生效日期</label>
+                                                <input type="text" class="form-control pickadate" placeholder="生效日期">
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">參考編號</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="參考編號" value="">
+                                            </div>
+                                        </div>
+                                        <!-- <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label for="users-list-role">縱隊 </label>
+                                                <fieldset class="form-group">
+                                                    <select class="form-control teamclasses" id="users-list-role">
+                                                        <option value="0">無</option>
+                                                        <option value="1">教導</option>
+                                                        <option value="2">菁英</option>
+                                                        <option value="3">地區</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label for="users-list-role"> </label>
+                                                <fieldset class="form-group elite-district-clss">
+                                                    <select class="form-control" id="users-list-role">
+                                                        <option value="">見習士官 </option>
+                                                        <option value="1">初級士官</option>
+                                                        <option value="2">中級士官</option>
+                                                        <option value="3">高級士官</option>
+                                                        <option value="3">少尉</option>
+                                                        <option value="3">中尉</option>
+                                                        <option value="3">上尉</option>
+                                                        <option value="3">少校</option>
+                                                        <option value="3">中校</option>
+                                                        <option value="3">上校</option>
+                                                        <option value="3">少將</option>
+                                                        <option value="3">上將</option>
+                                                    </select>
+                                                </fieldset>
+                                                <fieldset class="form-group elite-district-clss-2">
+                                                    <select class="form-control" id="users-list-role">
+                                                        <option value="">初級隊員</option>
+                                                        <option value="1">一級隊員</option>
+                                                        <option value="2">二級隊員</option>
+                                                        <option value="3">增減選項</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                        </div> -->
+                                        <div class="header pt-1 pb-1">
+                                            <h4 class="card-title title-cls"><b>個人資料</b></h4>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">中文姓名</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="中文姓名" value="">
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">英文姓名</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="英文姓名" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">出生日期</label>
+                                                <fieldset class="form-group position-relative has-icon-left">
+                                                    <input type="text" class="form-control pickadate" placeholder="選擇日期">
+                                                    <div class="form-control-position">
+                                                        <i class='bx bx-calendar'></i>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">性別</label>
+                                                <ul class="list-unstyled mb-0">
+                                                    <li class="d-inline-block mt-1 mr-1 mb-1">
+                                                        <fieldset>
+                                                            <div class="custom-control custom-radio">
+                                                                <input type="radio" class="custom-control-input" name="customRadio1" id="customRadio4">
+                                                                <label class="custom-control-label" for="customRadio4">男</label>
+                                                            </div>
+                                                        </fieldset>
+                                                    </li>
+                                                    <li class="d-inline-block my-1 mr-1 mb-1">
+                                                        <fieldset>
+                                                            <div class="custom-control custom-radio">
+                                                                <input type="radio" class="custom-control-input" name="customRadio1" id="customRadio3">
+                                                                <label class="custom-control-label" for="customRadio3">女</label>
+                                                            </div>
+                                                        </fieldset>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <!-- <div class="header pt-1 pb-1">
+                                            <h4 class="card-title title-cls">聯絡資料</h4>
+                                        </div> -->
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">電子郵件地址</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="電子郵件地址" value="">
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">聯絡電話 (主要)</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="聯絡電話 (主要)" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">聯絡電話2</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="聯絡電話2" value="">
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">聯絡電話3</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="聯絡電話3" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">中文地址</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="中文地址" value="">
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">英文地址</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="英文地址" value="">
+                                            </div>
+                                        </div>
+                                        <!-- <div class="header pt-1 pb-1">
+                                            <h4 class="card-title title-cls">背景資料</h4>
+                                        </div> -->
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">國籍</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="國籍" value="">
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">職業</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="職業" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">身份證號碼</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="身份證號碼" value="">
+                                            </div>
+                                        </div>
+                                        <div class="header pt-1 pb-1">
+                                            <h4 class="card-title title-cls">最高學歷: </h4>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">最高學歷</label>
+                                                <fieldset class="form-group">
+                                                    <select class="form-control highereducation-cls" id="users-list-role">
+                                                        <option value="">幼稚園</option>
+                                                        <option value="1">幼稚園</option>
+                                                        <option value="2">小學</option>
+                                                        <option value="3">中三</option>
+                                                        <option value="3">中學畢業</option>
+                                                        <option value="3">副學士</option>
+                                                        <option value="3">大專</option>
+                                                        <option value="3">碩士</option>
+                                                        <option value="3">博士</option>
+                                                        <option value="3">教授</option>
+                                                        <option value="others">其他</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50 notecls">
+                                                <label class="text-bold-600" for="exampleInputUsername1">請註明</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="請註明" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">就讀學院名稱</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="就讀學院名稱" value="">
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">就讀學科</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="就讀學科" value="">
+                                            </div>
+                                        </div>
+                                        <div class="header pt-1 pb-1">
+                                            <h4 class="card-title title-cls">活動經驗及技能</h4>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label for="users-list-role">相關活動經驗</label>
+                                                <fieldset class="form-group">
+                                                    <select class="form-control realtedactivity-cls" id="realtedactivity" name="relatedactivity[]" multiple="multiple">
+                                                        <option value="0">無</option>
+                                                        <option value="1">香港大學生軍事生活體驗營</option>
+                                                        <option value="2">青少年軍事夏令營</option>
+                                                        <option value="3">青少年德育培訓課程</option>
+                                                        <option value="4">其他制服團體</option>
+                                                        <option value="5">其他</option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">其他活動經驗</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="其他活動經驗" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label for="users-list-role">專業技能</label>
+                                                <fieldset class="form-group">
+                                                    <select class="form-control specialtycls realtedactivity-cls" id="specialtycls" multiple="multiple">
+                                                        <option value="">無</option>
+                                                        <option value="">急救</option>
+                                                        <option value="">拯溺s </option>
+                                                        <option value="">AED及CPR</option>
+                                                        <option value="others">其他</option>
+                                                    </select>
+                                                </fieldset>
+                                                <div class="form-row specialty-cls">
+                                                    <div class="form-group col-md-12 mb-50">
+                                                        <input type="text" class="form-control" id="Experience" placeholder="其他專業" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="header pt-1 pb-1">
+                                            <!-- <h4 class="card-title title-cls">緊急聯絡人資料、聯絡電話及與團員之關係 </h4> -->
+                                            <h4 class="card-title title-cls">其他 </h4>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">健康申報</label>
+                                                <ul class="list-unstyled mb-0">
+                                                    <li class="d-inline-block mt-1 mr-1 mb-1">
+                                                        <fieldset>
+                                                            <div class="custom-control custom-radio">
+                                                               <input type="radio" class="custom-control-input" name="healthdeclaration" id="customRadio7" value="Yes">
+                                                                <label class="custom-control-label" for="customRadio7">無特別申報</label>
+                                                            </div>
+                                                        </fieldset>
+                                                    </li>
+                                                    <li class="d-inline-block my-1 mr-1 mb-1">
+                                                        <fieldset>
+                                                            <div class="custom-control custom-radio">
+                                                                <input type="radio" class="custom-control-input" name="healthdeclaration" id="customRadio8" value="No">
+                                                                <label class="custom-control-label" for="customRadio8">是</label>
+                                                            </div>
+                                                        </fieldset>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <div class="form-row health-decl-cls">
+                                                    <div class="form-group col-md-12 mb-50">
+                                                        <label class="text-bold-600" for="exampleInputUsername1"></label>
+                                                        <input type="text" class="form-control" id="Experience" placeholder="健康聲明" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">緊急聯絡人姓名</label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="" value="">
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">緊急聯絡電話 </label>
+                                                <input type="text" class="form-control" id="exampleInputUsername1" placeholder="" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label for="users-list-role">與團員之關係 </label>
+                                                <fieldset class="form-group">
+                                                    <select class="form-control relarionshipcls" id="users-list-role">
+                                                        <option value=""> 父子</option>
+                                                        <option value="">母子</option>
+                                                        <option value="">父女</option>
+                                                        <option value="">母女 </option>
+                                                        <option value="">兄弟姊妹</option>
+                                                        <option value="others">其他 </option>
+                                                    </select>
+                                                </fieldset>
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50 relationship-cls">
+                                                <label class="text-bold-600" for="exampleInputUsername1"></label>
+                                                <input type="text" class="form-control" id="Experience" placeholder="其他關係" value="">
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label class="text-bold-600" for="exampleInputUsername1">入隊日期</label>
+                                                <fieldset class="form-group position-relative has-icon-left">
+                                                    <input type="text" class="form-control pickadate" placeholder="選擇日期">
+                                                    <div class="form-control-position">
+                                                        <i class='bx bx-calendar'></i>
+                                                    </div>
+                                                </fieldset>
+                                            </div>
+                                            <div class="form-group col-md-6 mb-50">
+                                                <label for="users-list-role">附註  </label>
+                                                <fieldset class="form-group">
+                                                    <select class="form-control remarkscls" id="users-list-role">
+                                                        <option value="accident">意外</option>
+                                                        <option value="discipline">紀律</option>
+                                                        <option value="appraisal">讚揚</option>
+                                                        <option value="others">其他</option>
+                                                    </select>
+                                                </fieldset>
+                                                <div class="form-row remarks-cls">
+                                                    <div class="form-group col-md-12 mb-50">
+                                                        <input type="text" class="form-control" id="Experience" placeholder="其他備註" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row accident-cls">
+                                                    <div class="form-group col-md-12 mb-50">
+                                                        <input type="text" class="form-control" id="Experience" placeholder="意外" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row discipline-cls">
+                                                    <div class="form-group col-md-12 mb-50">
+                                                        <input type="text" class="form-control" id="Experience" placeholder="紀律" value="">
+                                                    </div>
+                                                </div>
+                                                <div class="form-row appraisal-cls">
+                                                    <div class="form-group col-md-12 mb-50">
+                                                        <input type="text" class="form-control" id="Experience" placeholder="讚揚" value="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary glow position-relative submit">提交</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- users edit ends -->
+                </div>
+            </div>
+        </div>
+        <!-- END: Content-->
+        <div class="sidenav-overlay"></div>
+        <div class="drag-target"></div>
+        <!-- BEGIN: Footer-->
+        <footer class="footer footer-static footer-light">
+            <p class="clearfix mb-0"><span class="float-left d-inline-block">2020 &copy; SCOUT</span><span class="float-right d-sm-inline-block d-none">Crafted with<i class="bx bxs-heart pink mx-50 font-small-3"></i>by<a class="text-uppercase" href="index.html" target="_blank">Scout</a></span>
+                <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="bx bx-up-arrow-alt"></i></button>
+            </p>
+        </footer>
+        <!-- END: Footer-->
+        <!-- BEGIN: Vendor JS-->
+        <script src="../app-assets/vendors/js/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+                //$('#realtedactivity').select2();
+                $(".health-decl-cls").hide();
+                $(".other-exp-cls").hide();
+                $(".specialty-cls").hide();
+                $(".remarks-cls").hide();
+                $(".accident-cls").hide();
+                $(".discipline-cls").hide();
+                $(".appraisal-cls").hide();
+                $(".speicalins-cls").hide();
+                $(".relationship-cls").hide();
+                $(".speicals-instructor-cls").hide();
+                $(".elite-district-cls").hide();
+                $(".elite-district-clss").hide();
+                $(".elite-district-clss-2").hide();
+                $(".notecls").hide();
+                $('input[name=otherexperience]:radio').click(function() {
+                    if($('input[name=otherexperience]:checked').val() == "Yes"){
+                        $(".other-exp-cls").show();
+                    }else{
+                        $(".other-exp-cls").hide();
+                    }
+                });
+
+                $('input[name=healthdeclaration]:radio').click(function() {
+                    if($('input[name=healthdeclaration]:checked').val() == "Yes"){
+                        $(".health-decl-cls").show();
+                    }else{
+                        $(".health-decl-cls").hide();
+                    }
+                });
+
+                $('input[name=speiaclins]:radio').click(function() {
+                    if($('input[name=speiaclins]:checked').val() == "1"){
+                        $(".speicals-instructor-cls").show();
+                    }else{
+                        $(".speicals-instructor-cls").hide();
+                    }
+                });
+
+                $("select.specialtycls").change(function(){
+                    var selectsepcialty = $(this).children("option:selected").val();
+                    if(selectsepcialty == 'others'){
+                        $(".specialty-cls").show();
+                    }else{
+                        $(".specialty-cls").hide();
+                    }
+                });
+                $("select.teamclass").change(function(){
+                    var team = $(this).children("option:selected").val();
+                    if(team == '1'){
+                        $(".speicalins-cls").show();
+                        $(".elite-district-cls").hide();
+                    }else if(team == "2" || team == "3"){
+                        $(".elite-district-cls").show();
+                        $(".speicalins-cls").hide();
+                    }
+                    else{
+                        $(".speicalins-cls").hide();
+                        $(".elite-district-cls").hide();
+                    }
+                });
+
+                $("select.relarionshipcls").change(function(){
+                    var selectsepcialty = $(this).children("option:selected").val();
+                    if(selectsepcialty == 'others'){
+                        $(".relationship-cls").show();
+                    }else{
+                        $(".relationship-cls").hide();
+                    }
+                });
+                $("select.highereducation-cls").change(function(){
+                    var selectsepcialty = $(this).children("option:selected").val();
+                    if(selectsepcialty == 'others'){
+                        $(".notecls").show();
+                    }else{
+                        $(".notecls").hide();
+                    }
+                });
+
+                $("select.teamclasses").change(function(){
+                    var selectsepcialty = $(this).children("option:selected").val();
+                    if(selectsepcialty == '1'){
+                        $(".elite-district-clss").show();
+                        $(".elite-district-clss-2").hide();
+                    }else if(selectsepcialty == '2' || selectsepcialty == '3'){
+                        $(".elite-district-clss-2").show();
+                        $(".elite-district-clss").hide();
+                    }else{
+                        $(".elite-district-clss").hide();
+                        $(".elite-district-clss-2").hide();
+                    }
+                });
+                $("select.remarkscls").change(function(){
+                    var selectsepcialty = $(this).children("option:selected").val();
+                    if(selectsepcialty == 'others'){
+                        $(".remarks-cls").show();
+                        $(".accident-cls").hide();
+                        $(".discipline-cls").hide();
+                        $(".appraisal-cls").hide();
+                    }else if(selectsepcialty == 'accident'){
+                        $(".accident-cls").show();
+                        $(".remarks-cls").hide();
+                        $(".discipline-cls").hide();
+                        $(".appraisal-cls").hide();
+                    }else if(selectsepcialty == 'discipline'){
+                        $(".discipline-cls").show();
+                        $(".remarks-cls").hide();
+                        $(".accident-cls").hide();
+                        $(".appraisal-cls").hide();
+                    }else if(selectsepcialty == 'appraisal'){
+                        $(".appraisal-cls").show();
+                        $(".remarks-cls").hide();
+                        $(".accident-cls").hide();
+                        $(".discipline-cls").hide();
+                    }else{
+                        $(".remarks-cls").hide();
+                        $(".accident-cls").hide();
+                        $(".discipline-cls").hide();
+                        $(".appraisal-cls").hide();
+                    }
+                });
+                const inputTemplateOptions = {
+                    enableHTML: true,
+                    templates: {
+                      li: '<li><a><label style="display:inline;"></label><input type="text" class="custom-input" /></a></li>'
+                    }
+                  };
+                $('#realtedactivity').each(function() {
+                    const config = Object.assign({},inputTemplateOptions,
+                        $(this).data('multiselect-config')
+                    );
+                    $(this).multiselect(config);
+                    $( "input.custom-input" ).on( "click", function() {
+                        event.stopPropagation();
+                    });
+                });
+                $('#specialtycls').each(function() {
+                    const config = Object.assign({},inputTemplateOptions,
+                        $(this).data('multiselect-config')
+                    );
+                    $(this).multiselect(config);
+                    $( "input.custom-input" ).on( "click", function() {
+                        event.stopPropagation();
+                    });
+                });
+            });
+        </script>
+        <script src="../app-assets/vendors/js/vendors.min.js"></script>
+        <script src="../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+        <script src="../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+        <script src="../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+        <!-- BEGIN Vendor JS-->
+        <!-- BEGIN: Page Vendor JS-->
+         <script src="../app-assets/vendors/js/charts/apexcharts.min.js"></script>
+        <script src="../app-assets/vendors/js/extensions/dragula.min.js"></script>
+        <script src="../app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+        <script src="../app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+        <script src="../app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
+        <script src="../app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
+        <script src="../app-assets/vendors/js/pickers/daterange/moment.min.js"></script>
+        <script src="../app-assets/vendors/js/pickers/daterange/daterangepicker.js"></script>
+        <script src="../app-assets/vendors/js/tables/datatable/datatables.min.js"></script>
+        <script src="../app-assets/vendors/js/tables/datatable/dataTables.bootstrap4.min.js"></script>
+        <script type="text/javascript" src="../assets/js/bootstrap-multiselect.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-beta.1/dist/js/select2.min.js"></script>
+        <!-- END: Page Vendor JS-->
+        <!-- BEGIN: Theme JS-->
+        <script src="../app-assets/js/core/app-menu.js"></script>
+        <script src="../app-assets/js/core/app.js"></script>
+        <script src="../app-assets/js/scripts/components.js"></script>
+        <script src="../app-assets/js/scripts/footer.js"></script>
+        <!-- END: Theme JS-->
+        <!-- BEGIN: Page JS-->
+        <script src="../app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js"></script>
+        <script src="../app-assets/js/scripts/pages/page-users.js"></script>
+        <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+        <!-- END: Page JS-->
+    </body>
+    <!-- END: Body-->
+</html>

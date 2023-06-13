@@ -734,11 +734,15 @@ class AttendanceController extends Controller {
 		}
 		if (!empty($userData)) {
 			$userid = $userData->ID;
+			$attendingUser = $userData->English_name;
 			$hour_point = $userData->hour_point;
 		}
 		// Redirect url
 		$redirect = '/attendanceManagement';
 		$eventData = Events::where('id', $request->event_id)->first();
+		$eventName = $eventData->event_name;
+		$eventType = EventType::find($eventData->event_type)->event_type_name_en;
+		$enterEventDate = date('Y-m-d');
 		if (!empty($userData)) {
 			// if($eventData->is_free_event == 0 && empty($hour_point)) {
 			// 	return response()->json(array(
@@ -772,6 +776,7 @@ class AttendanceController extends Controller {
 						$Alreadylogin = Attendance::where('event_id', $request->event_id)->where('user_id', $userid)->get()->toArray();
 						if (empty($Alreadylogin)) {
 							$inTime = date('H:i');
+							$enterEventTime = $inTime;
 							$eventStartdate = date("d-m-Y", strtotime($eventData['startdate']));
 							if (strtotime(date("d-m-Y")) >= strtotime($eventStartdate) && $this->checkTimeLimitScaning($eventData['start_time']) == 'true') {								
 								if ($eventendtime > $inTime) {
@@ -902,6 +907,16 @@ class AttendanceController extends Controller {
 												}
 											}
 											$result = $attendance->save();
+											$data = [
+												'event_name' => $eventName,
+												'event_type' => $eventType,
+												'event_enter_date' => $enterEventDate,
+												'event_enter_time' => $enterEventTime,
+												'member_code' => $MemberCode,
+												'attending_to' => $attendingUser,
+												'attending _by' => Session::get('user')['username']
+											];
+											Helper::InsertAuditLogfuncation($data, $attendance->id, 'AttendanceManagement', 'Attendance');
 											if ($result) {
 												return response()->json(array(
 													'status' => 1,
@@ -1568,7 +1583,6 @@ class AttendanceController extends Controller {
 			*/
 
 			$search_result = DB::select(DB::raw("SELECT * FROM `event_schedule` WHERE `date` = '" . $filter_date_attendance_event . "' AND status = 1 GROUP BY event_code"));
-
 			if (!empty($search_result)) {
 				$array = json_decode(json_encode($search_result), true);
 				$ids = array_column($array, 'id');
@@ -1591,12 +1605,12 @@ class AttendanceController extends Controller {
 		if (!empty($request->filter_date_attendance_event)) {
 			$Select_db->whereIn('event_schedule.id', $ids);
 		}
-		if (Session::get('user')['user_id'] != '1') {
-			$Select_db->whereRaw('FIND_IN_SET(' . Session::get('user')['user_id'] . ',events.event_assign_user)');
+		if (Session::get('user')['user_id'] === 1 || Session::get('user')['role_id'] === 10) {
 			$result = $Select_db->groupBy('event_schedule.event_code')
 				->get()
 				->toArray();
 		} else {
+			$Select_db->whereRaw('FIND_IN_SET(' . Session::get('user')['user_id'] . ',events.event_assign_user)');
 			$result = $Select_db->groupBy('event_schedule.event_code')
 				->get()
 				->toArray();
@@ -1610,6 +1624,7 @@ class AttendanceController extends Controller {
 			foreach ($result as $val) {
 				$html .= '<option value="' . $val->event_id . '" data-event-schedule="' . $val->scheduleID . '" data-event-type="' . $val->$EventType . '">' . $val->event_name . '</option>';
 			}
+
 		}
 		$html .= '</select></fieldset>';
 		echo $html;
@@ -1800,7 +1815,7 @@ class AttendanceController extends Controller {
 	 */
 	public function transactionHistory() {
 
-		if (Session::get('user')['role_id'] == '1') {
+		if(in_array('transaction-history_read', Helper::module_permission(Session::get('user')['role_id']))) {
 			$transactionHistory = MemberUsedToken::with('users')->with('event')
 				->orderBy('id','desc')
 				->get()
@@ -1823,7 +1838,7 @@ class AttendanceController extends Controller {
 		// 		->toArray();
 		// 	return view('TokenManagement.token_management', compact('tokenList'));
 		// }
-		if (Session::get('user')['role_id'] == '1') {
+		if(in_array('token_management_read', Helper::module_permission(Session::get('user')['role_id']))) {
 			$tokenList = EventTokenManage::with('users')->with('EventSchedule','EventSchedule.events')->orderBy('id','DESC')->get()->toArray();
 			return view('TokenManagement.token_management', compact('tokenList'));
 		}
@@ -1834,12 +1849,9 @@ class AttendanceController extends Controller {
 	 *
 	 */
 	public function editToken($id) {
-		if (Session::get('user')['role_id'] == '1') {
-			$tokenData = MemberToken::with('users')->with('event')
-				->where('id', $id)->where('status', 0)
-				->where('expired', 0)
-				->first();
-
+		if(in_array('token_management_write', Helper::module_permission(Session::get('user')['role_id']))) {
+			$tokenData = EventTokenManage::with('users')->with('EventSchedule','EventSchedule.events')
+				->where('id', $id)->first();				
 			return view('TokenManagement.edit_token_management', compact('tokenData'));
 		}
 	}
@@ -1850,31 +1862,39 @@ class AttendanceController extends Controller {
 	 */
 	public function updateToken($id, Request $request) {
 		$date = DateTime::createFromFormat('m/d/Y', $request->expired_at);
-		$expired_at = $date->format('Y-m-d 00:00:00');
-		$tokenData = MemberToken::find($id);
-		$memberTokenStatus = MemberTokenStatus::where('user_id', $tokenData->user_id)
-			->first();
+		$currentDate = Carbon::now()->format('Y-m-d'); 
+		$expired_at = $date->format('Y-m-d');
+		$status = ($currentDate <= $expired_at) ? 'active' : 'expried';
+		$remaining_token = $request->token - $request->used_token;
+		$tokenData = EventTokenManage::find($id);
+		 $rules = array(
+            'token' => 'required|gt:0',
+            'used_token' => 'required|lt:token|gt:-1',
+			'expired_at' => 'required',
+		);	
+		$messages = array(
+            'token.required' => 'Please Enter Token',
+			'used_token.required' => 'Please Enter Used Token',
+			'expired_at.required' => 'Please Enter Expired Date',
+			'used_token.lt' => 'Used token shoud be less then generated token',
+			'token.gt' => 'Generate token value cannot be negative',
+			'used_token.gt' => 'Used token value cannot be negative',
+		);
+		if ($this->validate($request, $rules, $messages) === FALSE) {
+			return redirect()->back()->withInput();
+		}	
+		$postData = [
+			'generate_token' => $request->token,
+			'used_token' => $request->used_token,
+			'remaining_token' => $remaining_token,
+			'expire_date' => $expired_at,
+			'status' => $status,
+		];
 
-		if ($request->old_remaining_token == $request->remaining_token) {
-			//equal
+		Helper::AuditLogfuncation($postData, new EventTokenManage, 'id', $id, 'event_token_manage', 'Attendance');
 
-		} elseif ($request->old_remaining_token > $request->remaining_token) {
-			//less
-			$remaining_token = $request->old_remaining_token - $request->remaining_token;
-			$tokenData->remaining_token = $request->remaining_token;
-			$memberTokenStatus->total_token = ($memberTokenStatus->total_token - $remaining_token);
+		$result = $tokenData->update($postData);
 
-		} else {
-			//greater
-			$remaining_token = $request->remaining_token - $request->old_remaining_token;
-			$tokenData->remaining_token = $request->remaining_token;
-			$memberTokenStatus->total_token = ($memberTokenStatus->total_token + $remaining_token);
-
-		}
-		$saveMemberToken = $memberTokenStatus->save();
-		$tokenData->remark = !empty($request->remark) ? $request->remark : NULL;
-		$tokenData->expired_at = $expired_at;
-		$result = $tokenData->save();
 		if ($result) {
 			return redirect('token-management')->with('success_msg', 'Token updated successfully.');
 		} else {

@@ -132,7 +132,7 @@ class Helper {
 		$currentDate = date('Y-m-d');
 		$ExpireDate = date('Y-m-d', strtotime('-30days'));
 		// Get the count og user available tokens
-		$CountEventTotalToken = EventTokenManage::where('user_id',$user_id)->where('status','active')->sum('remaining_token');		
+		$CountEventTotalToken = EventTokenManage::where('user_id',$user_id)->where('status','active')->sum('remaining_token');
 		return $CountEventTotalToken;
 	}
 
@@ -535,5 +535,34 @@ class Helper {
 		$hours = floor($time / 60);
 		$minutes = ($time % 60);
 		return sprintf($format, $hours, $minutes);
+	}
+
+	public static function exportAuditLogfuncation($value, $tablename, $pagename) {
+		if (!empty($value)) {
+			$AuditLog = new AuditLog;
+			$AuditLog->Log = json_encode($value);
+			$AuditLog->table_name = $tablename;
+			$AuditLog->page = $pagename;
+			$AuditLog->date = date('Y-m-d');
+			if(Session::get('user')['user_id']){
+				$AuditLog->user_id = Session::get('user')['user_id'];
+			}
+			$result = $AuditLog->save();
+		}
+	}
+
+	public static function InsertAuditLogfuncation($value, $logId, $tablename, $pagename) {
+		if (!empty($value)) {
+			$AuditLog = new AuditLog;
+			$AuditLog->Log = json_encode($value);
+			$AuditLog->Log_id = $logId;
+			$AuditLog->table_name = $tablename;
+			$AuditLog->page = $pagename;
+			$AuditLog->date = date('Y-m-d');
+			if(Session::get('user')['user_id']){
+				$AuditLog->user_id = Session::get('user')['user_id'];
+			}
+			$result = $AuditLog->save();
+		}
 	}
 }

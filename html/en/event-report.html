@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+	<!-- BEGIN: Head-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+		<meta name="description" content="Frest admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+		<meta name="keywords" content="admin template, Frest admin template, dashboard template, flat admin template, responsive admin template, web app">
+		<meta name="author" content="PIXINVENT">
+		<title>Events Management - Scout - Bootstrap HTML admin template</title>
+		<link rel="apple-touch-icon" href="../app-assets/images/ico/S_blue.png">
+		<link rel="shortcut icon" type="image/x-icon" href="../app-assets/images/ico/favicon.ico">
+		<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
+		<!-- BEGIN: Vendor CSS-->
+		<link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/vendors.min.css">
+		<link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/tables/datatable/datatables.min.css">
+		<!-- END: Vendor CSS-->
+		<!-- BEGIN: Theme CSS-->
+		<link rel="stylesheet" type="text/css" href="../app-assets/css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="../app-assets/css/bootstrap-extended.css">
+		<link rel="stylesheet" type="text/css" href="../app-assets/css/colors.css">
+		<link rel="stylesheet" type="text/css" href="../app-assets/css/components.css">
+		<link rel="stylesheet" type="text/css" href="../app-assets/css/themes/dark-layout.css">
+		<link rel="stylesheet" type="text/css" href="../app-assets/css/themes/semi-dark-layout.css">
+		<!-- END: Theme CSS-->
+		<!-- BEGIN: Page CSS-->
+		<link rel="stylesheet" type="text/css" href="../app-assets/css/core/menu/menu-types/vertical-menu.css">
+		<link rel="stylesheet" type="text/css" href="../app-assets/css/pages/page-users.css">
+		<!-- END: Page CSS-->
+		<!-- BEGIN: Custom CSS-->
+		<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/css/bootstrap-multiselect.css">
+		<!-- END: Custom CSS-->
+	</head>
+	<!-- END: Head-->
+	<!-- BEGIN: Body-->
+	<body class="vertical-layout vertical-menu-modern boxicon-layout no-card-shadow 2-columns  navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+		<!-- BEGIN: Header-->
+		<div class="header-navbar-shadow"></div>
+		<nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
+		<div class="navbar-wrapper">
+			<div class="navbar-container content">
+				<div class="navbar-collapse" id="navbar-mobile">
+					<div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+						<ul class="nav navbar-nav">
+							<li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon bx bx-menu"></i></a></li>
+						</ul>
+					</div>
+					<ul class="nav navbar-nav float-right">
+						<li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="selected-language">English </span></a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="../html/ch/event-management.html" data-language="en">中文 </a><a class="dropdown-item" href="../html/en/event-management.html" data-language="fr">English</a></div>
+							</li>
+							<li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+								<div class="user-nav d-sm-flex d-none"><span class="user-name">John Doe</span><span class="user-status text-muted">Available</span></div><span><img class="round" src="../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"></span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right pb-0">
+								<a class="dropdown-item" href="page-user-profile.html"><i class="bx bx-user mr-50"></i> Edit Profile</a>
+								<a class="dropdown-item" href="auth-login.html"><i class="bx bx-power-off mr-50"></i> Logout</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+		<!-- END: Header-->
+		<!-- BEGIN: Main Menu-->
+		<div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+			<div class="navbar-header">
+				<ul class="nav navbar-nav flex-row">
+					<li class="nav-item mr-auto">
+						<a class="navbar-brand" href="../html/en/index.html">
+							<div class="brand-logo"><img class="logo" src="../app-assets/images/logo/S_blue.png" /></div>
+							<h2 class="brand-text mb-0">Scout</h2>
+						</a>
+					</li>
+					<li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="bx bx-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon bx bx-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="bx-disc"></i></a></li>
+				</ul>
+			</div>
+			<div class="shadow-bottom"></div>
+			<div class="main-menu-content">
+				 <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="">
+				<li class="nav-item"><a href="index.html"><i class="bx bx-home-alt"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span></a>
+				</li>
+				<li class="nav-item"><a href="page-users-list.html"><i class="bx bx-user-plus"></i><span class="menu-title" data-i18n="User">Members</span></a>
+				</li>
+				<!-- <li class=" nav-item"><a href="activity-management.html"><i class="bx bx-run"></i><span class="menu-title" data-i18n="Dashboard">Activity Management</span></a>
+				</li> -->
+				<li class="active nav-item"><a href="event-management.html"><i class="bx bx-run"></i><span class="menu-title" data-i18n="Dashboard">Event Management</span></a>
+				</li>
+				<li class=" nav-item"><a href="attendance.html"><i class="bx bxs-book-open"></i><span class="menu-title" data-i18n="Dashboard">Attendance Management</span></a>
+				</li>
+				<li class=" nav-item"><a href="role-management.html"><i class="bx bx-user"></i><span class="menu-title" data-i18n="Dashboard">Role Management</span></a>
+				</li>
+				<li class="nav-item">
+					<a href="#"><i class="bx bxs-user-detail"></i><span class="menu-title" data-i18n="User">Uniform Receive/Sales</span></a>
+					<ul class="menu-content">
+						<li><a href="product-list.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="List">Product</span></a>
+						</li>
+						<li><a href="purchase-product-list.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">Purchase Product</span></a>
+						</li>
+						<li><a href="product-list-card.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">Product List</span></a>
+						</li>
+						<li><a href="cart.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">Cart</span></a>
+						</li>
+						<li><a href="checkout.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">Checkout</span></a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item">
+					<a href="#"><i class="bx bxs-user-detail"></i><span class="menu-title" data-i18n="User">Configuration</span></a>
+					<ul class="menu-content">
+						<li class=" nav-item"><a href="team.html"><i class="bx bx-group"></i><span class="menu-title" data-i18n="Dashboard">Team </span></a>
+						</li>
+						<li class=" nav-item"><a href="rank.html"><i class="bx bx-group"></i><span class="menu-title" data-i18n="Dashboard">Rank </span></a>
+						</li>
+						<li class=" nav-item"><a href="hour.html"><i class="bx bx-group"></i><span class="menu-title" data-i18n="Dashboard">Hours </span></a>
+						</li>
+						<li class="nav-item"><a href="awards-badge.html"><i class="bx bx-trophy"></i><span class="menu-title" data-i18n="Dashboard">Awards </span></a>
+						<li class="nav-item"><a href="badge.html"><i class="bx bx-trophy"></i><span class="menu-title" data-i18n="Dashboard">Badge </span></a>
+						</li>
+					</ul>
+				</li>
+				<!-- <li class=" nav-item"><a href="security.html"><i class="bx bxs-lock"></i><span class="menu-title" data-i18n="Dashboard">Security</span></a>
+					</li> -->
+			</ul>
+			</div>
+		</div>
+		<!-- END: Main Menu-->
+		<!-- BEGIN: Content-->
+		<div class="app-content content">
+			<div class="content-overlay"></div>
+			<div class="content-wrapper">
+				<div class="content-header row">
+					<div class="content-header-left col-12 mb-2 mt-1">
+						<div class="row breadcrumbs-top">
+							<div class="col-12">
+								<h4 class="content-header-title float-left pr-1 mb-0">Events Reports</h4>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="content-body">
+					<!-- users list start -->
+					<section class="users-list-wrapper">
+						<div class="users-list-filter px-1">
+							<form>
+								<div class="row border rounded py-2 mb-2">
+									<div class="float-right align-items-center ml-1 col-md-3">
+										<span><b>Event Name</b> : <span>Transaction</span></span>
+									</div>
+									<div class="float-right align-items-center ml-1 col-md-2">
+										<span><b>Date</b> : <span>05/08/2020</span></span>
+									</div>
+									<div class="float-right align-items-center ml-1 col-md-3">
+										<span><b>No.Of Attendance </b> : <span>50</span></span>
+									</div>
+									<div class="float-right align-items-center ml-1 col-md-3">
+										<span><b>Total Hours</b> : <span>100</span></span>
+									</div>
+								</div>
+							</form>
+						</div>
+						<div class="users-list-table">
+							<div class="card">
+								<div class="card-content">
+									<div class="card-body">
+										<!-- datatable start -->
+										<div class="table-responsive">
+											<div id="users-list-datatable_wrapper" class="dataTables_wrapper dt-bootstrap4 no-footer">
+												<div class="row">
+													<div class="col-sm-12 col-md-6">
+														<div class="dataTables_length" id="users-list-datatable_length">
+															<label>
+																Show 
+																<select name="users-list-datatable_length" aria-controls="users-list-datatable" class="custom-select custom-select-sm form-control form-control-sm">
+																	<option value="10">10</option>
+																	<option value="25">25</option>
+																	<option value="50">50</option>
+																	<option value="100">100</option>
+																</select>
+																entries
+															</label>
+														</div>
+													</div>
+													<div class="col-sm-12 col-md-6">
+														<div id="users-list-datatable_filter" class="dataTables_filter">
+															<label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="users-list-datatable"></label>
+														</div>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-12">
+														<table id="users-list-datatable" class="table">
+															<thead>
+																<tr>
+																	<th>No.</th>
+																	<th>Name</th>
+																	<th>Result</th>
+																	<th>Check-in</th>
+																	<th>Check-out</th>
+																	<th>Hours</th>
+																	<th>Awards/Badge</th>
+																</tr>
+															</thead>
+															<tbody>
+																<tr>
+																	<td>1</td>
+																	<td>Dean Stanley</td>
+																	<td>Passed</td>
+																	<td>08:00</td>
+																	<td>10:00</td>
+																	<td>2</td>
+																	<td><img src="../app-assets/images/MovingOnAwardScoutstoExplorers.png" class="img-fluid" alt="gallery avtar img" height="50px" width="50px"></td>
+																</tr>
+																<tr>
+																	<td>2</td>
+																	<td>Airi Satou</td>
+																	<td>Failed</td>
+																	<td>08:00</td>
+																	<td>01:00</td>
+																	<td>5</td>
+																	<td><img src="../app-assets/images/MembershipBadge.png" class="img-fluid" alt="gallery avtar img" height="50px" width="50px"></td>
+																</tr>
+															</tbody>
+														</table>
+													</div>
+												</div>
+												<div class="row">
+													<div class="col-sm-12 col-md-5">
+														<div class="dataTables_info" id="users-list-datatable_info" role="status" aria-live="polite">Showing 1 to 10 of 2 entries
+														</div>
+													</div>
+													<div class="col-sm-12 col-md-7">
+														<div class="dataTables_paginate paging_simple_numbers" id="users-list-datatable_paginate">
+															<ul class="pagination">
+																<li class="paginate_button page-item previous disabled" id="users-list-datatable_previous">
+																	<a href="#" aria-controls="users-list-datatable" data-dt-idx="0" tabindex="0" class="page-link">Previous</a>
+																</li>
+																<li class="paginate_button page-item active">
+																	<a href="#" aria-controls="users-list-datatable" data-dt-idx="1" tabindex="0" class="page-link">1</a>
+																</li>
+																<li class="paginate_button page-item next" id="users-list-datatable_next">
+																	<a href="#" aria-controls="users-list-datatable" data-dt-idx="5" tabindex="0" class="page-link">Next</a>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+											<!-- datatable ends -->
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+					<!-- users list ends -->
+					</div>
+				</div>
+			</div>
+			<!-- END: Content-->
+		</div>
+
+
+		<div class="modal fade assign-modal user-assign-model" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel"></h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="">
+							<strong>Select User:</strong>
+							<select id="multiple-checkboxes" multiple="multiple">
+								<option value="User 1">User 1</option>
+								<option value="User 2">User 2</option>
+								<option value="User 3">User 3</option>
+								<option value="User 4">User 4</option>
+								<option value="User 5">User 5</option>
+								<option value="User 6">User 6</option>
+							</select>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary close-assignuser" data-toggle="modal" data-target="#basicExampleModal">Assign User</button>
+						<!-- Modal -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal fade assign-tq" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-body">
+							<h3 class="align-items-center">Thank you.</h3>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary close-thnkyou " data-dismiss="modal">OK</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="sidenav-overlay"></div>
+		<div class="drag-target"></div>
+		<!-- BEGIN: Footer-->
+		<footer class="footer footer-static footer-light">
+			<p class="clearfix mb-0"><span class="float-left d-inline-block">2020 &copy; SCOUT</span><span class="float-right d-sm-inline-block d-none">Crafted with<i class="bx bxs-heart pink mx-50 font-small-3"></i>by<a class="text-uppercase" href="index.html" target="_blank">Scout</a></span>
+				<button class="btn btn-primary btn-icon scroll-top" type="button"><i class="bx bx-up-arrow-alt"></i></button>
+			</p>
+		</footer>
+		<!-- END: Footer-->
+		<!-- BEGIN: Vendor JS-->
+		<script src="../app-assets/vendors/js/vendors.min.js"></script>
+		<script src="../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+		<script src="../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+		<script src="../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+		<!-- BEGIN: Theme JS-->
+		<script src="../app-assets/js/core/app-menu.js"></script>
+		<script src="../app-assets/js/core/app.js"></script>
+		<script src="../app-assets/js/scripts/components.js"></script>
+		<script src="../app-assets/js/scripts/footer.js"></script>
+		<!-- END: Theme JS-->
+			<!-- BEGIN: Page JS-->
+		<script src="../app-assets/js/scripts/modal/components-modal.js"></script>
+		<!-- END: Page JS-->
+		<!-- BEGIN: Page JS-->
+		<script src="../app-assets/js/scripts/pages/page-users.js"></script>
+		<!-- END: Page JS-->
+	
+		  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-multiselect/0.9.13/js/bootstrap-multiselect.js"></script>
+		  <script type="text/javascript">
+				$(document).ready(function() {
+					$('#multiple-checkboxes').multiselect({
+					  includeSelectAllOption: true,
+					});
+					$(".close-assignuser").click(function(){
+						$(".user-assign-model").hide();
+						$(".assign-tq").show();
+						$(".modal-backdrop").removeClass();
+				  	});
+				  
+				  	$(".close-thnkyou").click(function(){
+						$(".assign-tq").hide();
+				  	});
+				  	$("select.status").change(function(){
+						var selectsepcialty = $(this).children("option:selected").val();
+						if(selectsepcialty == 'closeevent'){
+							window.location.href = "event-report.html";
+						}
+					});
+				});
+		  </script>
+		 <!--  <script type="text/javascript">
+			$(document).ready(function() {
+		  </script> -->
+	</body>
+	<!-- END: Body-->
+</html>

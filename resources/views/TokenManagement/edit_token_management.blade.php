@@ -51,29 +51,32 @@
 								<div class="form-row">
 									<div class="form-group col-md-6 mb-50">
 										<label class="text-bold-600" for="Token">{{ __('languages.member.Tokens') }}</label>
-										<input type="text" class="form-control" id="Token" name="token" placeholder="{{ __('languages.member.Tokens') }}" value="{{ $tokenData->token }}" readonly="">
+										<input type="text" class="form-control" id="Token" name="token" placeholder="{{ __('languages.member.Tokens') }}" value="{{ $tokenData->generate_token }}">
+										<span class="text-danger">{{ $errors->first('token') }}</span>
 									</div>
 									<div class="form-group col-md-6 mb-50">
-										<label class="text-bold-600" for="MemberName">{{ __('languages.Token Management.Remaining Token') }}</label>
-										<input type="hidden" class="form-control" id="old_remaining_token" name="old_remaining_token" placeholder="{{ __('languages.Token Management.Remaining Token') }}" value="{{ $tokenData->remaining_token }}">
-										<input type="number" class="form-control" id="remaining_token" name="remaining_token" placeholder="" value="{{ $tokenData->remaining_token }}">
+										<label class="text-bold-600" for="MemberName">{{__('languages.used_token')}}</label>
+										<input type="text" class="form-control" id="remark" name="used_token" placeholder="{{__('languages.used_token')}}" value="{{ $tokenData->used_token }}">
+										<span class="text-danger">{{ $errors->first('used_token') }}</span>
 									</div>
 								</div>
 
 
 								<div class="form-row">
+								<div class="form-group col-md-6 mb-50">
+										<label class="text-bold-600" for="MemberName">{{ __('languages.Token Management.Remaining Token') }}</label>
+										<input type="hidden" class="form-control" id="old_remaining_token" name="old_remaining_token" placeholder="{{ __('languages.Token Management.Remaining Token') }}" value="{{ $tokenData->remaining_token }}">
+										<input type="number" class="form-control" id="remaining_token" name="remaining_token" placeholder="" value="{{ ($tokenData->generate_token) - ($tokenData->used_token) }}" readonly="">
+									</div>
 									<div class="form-group col-md-6 mb-50">
 										<label class="text-bold-600" for="Token">{{ __('languages.Token Management.Expire Date') }}</label>
 										<fieldset class="form-group position-relative has-icon-left">
-											<input type="text" class="form-control" placeholder="{{ __('languages.Token Management.Expire Date') }}" name="expired_at" id="expired_at" value="{{ date('m/d/Y',strtotime($tokenData->expired_at)) }}">
+											<input type="text" class="form-control" placeholder="{{ __('languages.Token Management.Expire Date') }}" name="expired_at" id="expired_at" value="{{ date('m/d/Y',strtotime($tokenData['expire_date'])) }}">
 											<div class="form-control-position">
 												<i class='bx bx-calendar'></i>
 											</div>
 										</fieldset>
-									</div>
-									<div class="form-group col-md-6 mb-50">
-										<label class="text-bold-600" for="MemberName">{{ __('languages.Token Management.Remark') }}</label>
-										<input type="text" class="form-control" id="remark" name="remark" placeholder="{{ __('languages.Token Management.Remark') }}" value="{{ $tokenData->remark }}">
+										<span class="text-danger">{{ $errors->first('expired_date') }}</span>
 									</div>
 								</div>
 

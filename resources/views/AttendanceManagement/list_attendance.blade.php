@@ -782,6 +782,7 @@ function exportAttendanceList(){
                     var url = URL.createObjectURL(blobObject);
                     downloadLink.href = url;
                     downloadLink.download = "AttendanceList.csv";
+                    exportHistroy('Attendance', url, fileData);
 
                     document.body.appendChild(downloadLink);
                     downloadLink.click();

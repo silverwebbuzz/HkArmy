@@ -36,7 +36,8 @@ class UserManagementController extends Controller
                 });
             }
         }
-        $userData = $Query->where('Role_ID','<>',1)->sortable(['ID'=>'Desc'])->paginate($items);
+       // $userData = $Query->where('Role_ID','<>',1)->sortable(['ID'=>'Desc'])->paginate($items);
+        $userData = $Query->where([['Role_ID','<>',1],['Role_ID','<>',2]])->sortable(['ID'=>'Desc'])->paginate($items);
         return view('UserManagement.user_list',compact('userData','items'));
     }
 
@@ -122,7 +123,7 @@ class UserManagementController extends Controller
                 'subject' => "Credential",
                 'qrcode' => $dataUri,
             );
-            Mail::send('email.sendLoginCredential',$dataarr, function ($message) use ($dataarr,$qrimag,$public_path,$Email) {
+            /*Mail::send('email.sendLoginCredential',$dataarr, function ($message) use ($dataarr,$qrimag,$public_path,$Email) {
                 $attchmentImage = $public_path.'/'.$qrimag;
                 $message->to($Email)
                 ->subject('Credential')
@@ -130,7 +131,7 @@ class UserManagementController extends Controller
                     'as' => 'qrcode.png',
                     'mime' => 'image/png'
                 ]);
-            });
+            });*/
             $qrImage = User::find($lastinsertid);
             $qrImage->QrCode = $qrimag;
             $qrImage->save();

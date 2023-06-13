@@ -9,32 +9,48 @@ use App\Http\Models\AuditLog;
 use DB;
 use Session;
 use App\Helpers\Helper;
+use Carbon\Carbon;  
 
 class AuditLogController extends Controller
 {
 	
 	public function index(Request $request){
 		if(in_array('settings_read', Helper::module_permission(Session::get('user')['role_id']))){
-			$auditlog = AuditLog::with('users')->orderBy('id','desc')->get()->toArray();
-			foreach ($auditlog as $key => $value) {
-				$id = $value['Log_id'];
-				$tablename  = $value['table_name'];
-				if($tablename == 'users'){
-					$ID = 'ID';
-				}else{
-					$ID = 'id';
+			$auditlog = AuditLog::with('users')->orderBy('created_at','desc')->get()->groupBy(function ($date) {
+				return Carbon::parse($date->date)->format('Y-m-d');
+			})->toArray();
+			$dateWiseAuditLog = [];
+			foreach ($auditlog as $date => $logs) {
+				$user_id = 0;
+				foreach ($logs as $log) {
+					if ($user_id !== $log['user_id']) {
+						$user_id = $log['user_id'];
+					    $dateWiseAuditLog[$date][$log['user_id']] = $log;
+					}
 				}
-				$data = DB::table($tablename)->where($ID,$id)->first();
 			}
-			return view('auditlog.auditlog_list',compact('auditlog'));
+			// foreach ($auditlog as $key => $value) {
+			// 	$id = $value['Log_id']; 
+			// 	$tablename  = $value['table_name'];
+			// 	if($tablename == 'users'){
+			// 		$ID = 'ID';
+			// 	}else{
+			// 		$ID = 'id';
+			// 	}  
+			// 	$data = DB::table($tablename)->where($ID,$id)->first();
+			// }
+			return view('auditlog.auditlog_list',compact('dateWiseAuditLog'));
 		}else{
 			return redirect('/');
 		}
 	}
 
-	public function show($id){
+	public function show($id, $date){
 		if(in_array('settings_write', Helper::module_permission(Session::get('user')['role_id']))){
-			$auditlog = AuditLog::where('id',$id)->first();
+			// $auditlog = AuditLog::where('id',$id)->first();
+			$auditlog = AuditLog::with('users')->where('user_id',$id)->where('date', $date)->orderBy('created_at', 'desc')->get()->groupBy(function ($date) {
+				return Carbon::parse($date->date)->format('Y-m-d');
+			})->toArray();
 			return view('auditlog.auditlog_view',compact('auditlog'));
 		}else{
 			return redirect('/');

@@ -85,8 +85,8 @@ $(function () {
                     } else {
                         $("#badges_categories").html(
                             '<option value="">' +
-                                CATEGORIES_NOT_AVAILABLE +
-                                "</option>"
+                            CATEGORIES_NOT_AVAILABLE +
+                            "</option>"
                         );
                     }
                 },
@@ -120,8 +120,8 @@ $(function () {
                     } else {
                         $("#parent_categories_id").html(
                             '<option value="">' +
-                                CATEGORIES_NOT_AVAILABLE +
-                                "</option>"
+                            CATEGORIES_NOT_AVAILABLE +
+                            "</option>"
                         );
                     }
                 },
@@ -151,8 +151,8 @@ $(function () {
                     } else {
                         $("#badges_type_id").html(
                             '<option value="">' +
-                                CATEGORIES_NOT_AVAILABLE +
-                                "</option>"
+                            CATEGORIES_NOT_AVAILABLE +
+                            "</option>"
                         );
                     }
                 },
@@ -289,29 +289,29 @@ $(function () {
             if (id == 1) {
                 $(".addmore-eventmoney-section").append(
                     '<div class="main-event-drop"><input type="text"  class="form-control" id="event_money" name="event_money[]" placeholder="' +
-                        PRODUCT_MONEY +
-                        '" value=""><a class="removeMoney deleteProductPostType btn btn-primary btn-sm" >X</a></div>'
+                    PRODUCT_MONEY +
+                    '" value=""><a class="removeMoney deleteProductPostType btn btn-primary btn-sm" >X</a></div>'
                 );
             } else if (id == 2) {
                 $(".addmore-eventtoken-section").append(
                     '<div class="main-event-drop"><input type="text" class="form-control" id="event_token" name="event_token[]" placeholder="' +
-                        PRODUCT_TOKEN +
-                        '" value=""><a class="removeToken deleteProductPostType btn btn-primary btn-sm" >X</a></div>'
+                    PRODUCT_TOKEN +
+                    '" value=""><a class="removeToken deleteProductPostType btn btn-primary btn-sm" >X</a></div>'
                 );
             } else if (id == 3) {
                 var lastid = $(this).attr("lastid");
                 $(".event-token-money-section").append(
                     '<div class="add-evens-cls1 main-money-token"><div class="form-group col-md-5 mb-50"><label class="text-bold-600" for="event_money_token">' +
-                        ADD_PRODUCT_MONEY_TOKEN +
-                        '</label><input type="text" class="form-control" id="event_plus_money" name="event_money_token[' +
-                        lastid +
-                        '][money]" placeholder="' +
-                        PRODUCT_MONEY +
-                        '" value=""></div><div class="form-group col-md-5 mb-50"><label class="text-bold-600" for="event_money_token"></label><input type="text" class="form-control" id="event_plus_token" name="event_money_token[' +
-                        lastid +
-                        '][token]" placeholder="' +
-                        PRODUCT_TOKEN +
-                        '" value=""></div><div class="form-group col-md-2 money-token-btn"><a class="removeMoneyToken deleteProductPostType btn btn-primary btn-sm" data-posttype="Money_Token">X</a></div></div>'
+                    ADD_PRODUCT_MONEY_TOKEN +
+                    '</label><input type="text" class="form-control" id="event_plus_money" name="event_money_token[' +
+                    lastid +
+                    '][money]" placeholder="' +
+                    PRODUCT_MONEY +
+                    '" value=""></div><div class="form-group col-md-5 mb-50"><label class="text-bold-600" for="event_money_token"></label><input type="text" class="form-control" id="event_plus_token" name="event_money_token[' +
+                    lastid +
+                    '][token]" placeholder="' +
+                    PRODUCT_TOKEN +
+                    '" value=""></div><div class="form-group col-md-2 money-token-btn"><a class="removeMoneyToken deleteProductPostType btn btn-primary btn-sm" data-posttype="Money_Token">X</a></div></div>'
                 );
                 // addMoneyTokenCount++;
                 // addMoneyTokenCount++;
@@ -369,14 +369,14 @@ $(function () {
             if (id == 1) {
                 $(".addmore-eventmoney-section").append(
                     '<div class="main-event-drop"><input type="text"  class="form-control" id="event_money" name="event_money[]" placeholder="' +
-                        EVENT_MONEY +
-                        '" value=""><a class="removeMoney deletePostType btn btn-primary btn-sm" >X</a></div>'
+                    EVENT_MONEY +
+                    '" value=""><a class="removeMoney deletePostType btn btn-primary btn-sm" >X</a></div>'
                 );
             } else if (id == 2) {
                 $(".addmore-eventtoken-section").append(
                     '<div class="main-event-drop"><input type="text" class="form-control" id="event_token" name="event_token[]" placeholder="' +
-                        EVENT_TOKEN +
-                        '" value=""><a class="removeToken deletePostType btn btn-primary btn-sm" >X</a></div>'
+                    EVENT_TOKEN +
+                    '" value=""><a class="removeToken deletePostType btn btn-primary btn-sm" >X</a></div>'
                 );
             } else if (id == 3) {
                 // $(".event-token-money-section").append(
@@ -394,15 +394,15 @@ $(function () {
                 // );
                 $(".event-token-money-section").append(
                     '<div class="add-evens-cls1 main-money-token"><div class="form-group col-md-5 mb-50">' +
-                        '<input type="text" class="form-control" id="event_plus_money" name="event_money_token[' +
-                        addMoneyTokenCount +
-                        '][money]" placeholder="' +
-                        EVENT_MONEY +
-                        '" value=""></div><div class="form-group col-md-5 mb-50"><input type="text" class="form-control" id="event_plus_token" name="event_money_token[' +
-                        addMoneyTokenCount +
-                        '][token]" placeholder="' +
-                        EVENT_TOKEN +
-                        '" value=""></div><div class="form-group col-md-2 money-token-btn"><a class="removeMoneyToken deletePostType btn btn-primary btn-sm" data-posttype="Money_Token">X</a></div></div>'
+                    '<input type="text" class="form-control" id="event_plus_money" name="event_money_token[' +
+                    addMoneyTokenCount +
+                    '][money]" placeholder="' +
+                    EVENT_MONEY +
+                    '" value=""></div><div class="form-group col-md-5 mb-50"><input type="text" class="form-control" id="event_plus_token" name="event_money_token[' +
+                    addMoneyTokenCount +
+                    '][token]" placeholder="' +
+                    EVENT_TOKEN +
+                    '" value=""></div><div class="form-group col-md-2 money-token-btn"><a class="removeMoneyToken deletePostType btn btn-primary btn-sm" data-posttype="Money_Token">X</a></div></div>'
                 );
                 addMoneyTokenCount++;
                 addMoneyTokenCount++;
@@ -512,10 +512,10 @@ $(function () {
                         $.each(test, function (key, value) {
                             select.append(
                                 "<option value=" +
-                                    value.ID +
-                                    ">" +
-                                    value.English_name +
-                                    "</option>"
+                                value.ID +
+                                ">" +
+                                value.English_name +
+                                "</option>"
                             );
                         });
                         $(".viewAssignMember").html(object.html);
@@ -727,10 +727,10 @@ $(function () {
                 $.each(test, function (key, value) {
                     select.append(
                         "<option value=" +
-                            value.ID +
-                            ">" +
-                            value.English_name +
-                            "</option>"
+                        value.ID +
+                        ">" +
+                        value.English_name +
+                        "</option>"
                     );
                 });
             },
@@ -797,16 +797,16 @@ $(function () {
                 if ($("#eventMoney").html() == undefined) {
                     $("#EditaddPostType").append(
                         '<div id="eventMoney" class="form-group col-md-6 mb-50 col-lg-3"><label class="text-bold-600" for="event_money">' +
-                            Money_LAN +
-                            '</label><input type="text" class="form-control" id="event_money" name="event_money" placeholder="" value=""><button type="button" class="btn btn-primary btn-sm deletepost" data-id="1">X</button></div>'
+                        Money_LAN +
+                        '</label><input type="text" class="form-control" id="event_money" name="event_money" placeholder="" value=""><button type="button" class="btn btn-primary btn-sm deletepost" data-id="1">X</button></div>'
                     );
                 }
             } else if (postTypeID == 2) {
                 if ($("#eventToken").html() == undefined) {
                     $("#EditaddPostType").append(
                         '<div id="eventToken" class="form-group col-md-6 mb-50 col-lg-3"><label class="text-bold-600" for="event_money">' +
-                            Tokens_LAN +
-                            '</label><input type="text" class="form-control" id="event_token" name="event_token" placeholder="" value=""><button type="button" class="btn btn-primary btn-sm deletepost" data-id="2">X</button></div>'
+                        Tokens_LAN +
+                        '</label><input type="text" class="form-control" id="event_token" name="event_token" placeholder="" value=""><button type="button" class="btn btn-primary btn-sm deletepost" data-id="2">X</button></div>'
                     );
                 }
             } else if (postTypeID == 3) {
@@ -818,10 +818,10 @@ $(function () {
                 ) {
                     $("#eventMoneyToken").append(
                         '<div class="form-group col-md-3 mb-50"><label class="text-bold-600" for="event_plus_money">' +
-                            Money_LAN +
-                            '</label><input type="text" class="form-control" id="event_plus_money" name="event_money_token[money]" placeholder="" value=""><button type="button" class="btn btn-primary btn-sm deletepost" data-id="3">X</button></div><div class="form-group col-md-3 mb-50"><label class="text-bold-600" for="event_plus_token">' +
-                            Tokens_LAN +
-                            '</label><input type="text" class="form-control" id="event_plus_token" name="event_money_token[token]" placeholder="" value=""><button type="button" class="btn btn-primary btn-sm deletepost" data-id="3">X</button></div>'
+                        Money_LAN +
+                        '</label><input type="text" class="form-control" id="event_plus_money" name="event_money_token[money]" placeholder="" value=""><button type="button" class="btn btn-primary btn-sm deletepost" data-id="3">X</button></div><div class="form-group col-md-3 mb-50"><label class="text-bold-600" for="event_plus_token">' +
+                        Tokens_LAN +
+                        '</label><input type="text" class="form-control" id="event_plus_token" name="event_money_token[token]" placeholder="" value=""><button type="button" class="btn btn-primary btn-sm deletepost" data-id="3">X</button></div>'
                     );
                 }
             }
@@ -1023,7 +1023,7 @@ $(function () {
                 id: id,
                 imageName: imageName,
             },
-            success: function (response) {},
+            success: function (response) { },
         });
     });
 
@@ -1032,7 +1032,6 @@ $(function () {
         singleDatePicker: true,
         showDropdowns: true,
         minYear: 1950,
-        minDate: new Date(),
         maxYear: parseInt(moment().format("YYYY"), 10),
     });
 
@@ -1059,10 +1058,10 @@ $(function () {
                 $.each(test, function (key, value) {
                     select.append(
                         "<option value=" +
-                            value.ID +
-                            ">" +
-                            value.English_name +
-                            "</option>"
+                        value.ID +
+                        ">" +
+                        value.English_name +
+                        "</option>"
                     );
                 });
             },
@@ -1107,10 +1106,10 @@ $(function () {
                 $.each(test, function (key, value) {
                     select.append(
                         "<option value=" +
-                            value.ID +
-                            ">" +
-                            value.English_name +
-                            "</option>"
+                        value.ID +
+                        ">" +
+                        value.English_name +
+                        "</option>"
                     );
                 });
 
@@ -1158,10 +1157,10 @@ $(function () {
                         $.each(test, function (key, value) {
                             select.append(
                                 "<option value=" +
-                                    value.ID +
-                                    ">" +
-                                    value.English_name +
-                                    "</option>"
+                                value.ID +
+                                ">" +
+                                value.English_name +
+                                "</option>"
                             );
                         });
 
@@ -1204,10 +1203,10 @@ $(function () {
                         $.each(test, function (key, value) {
                             select.append(
                                 "<option value=" +
-                                    value.ID +
-                                    ">" +
-                                    value.English_name +
-                                    "</option>"
+                                value.ID +
+                                ">" +
+                                value.English_name +
+                                "</option>"
                             );
                         });
                         $(".viewAssignMember").html(object.html);
@@ -1618,8 +1617,8 @@ $(function () {
             function (ev, picker) {
                 $(this).val(
                     picker.startDate.format("DD/MM/YYYY") +
-                        " - " +
-                        picker.endDate.format("DD/MM/YYYY")
+                    " - " +
+                    picker.endDate.format("DD/MM/YYYY")
                 );
             }
         );
@@ -1655,8 +1654,8 @@ $(function () {
         $(".filterrank").on("apply.daterangepicker", function (ev, picker) {
             $(this).val(
                 picker.startDate.format("MM/DD/YYYY") +
-                    " - " +
-                    picker.endDate.format("MM/DD/YYYY")
+                " - " +
+                picker.endDate.format("MM/DD/YYYY")
             );
         });
     }
@@ -1693,8 +1692,8 @@ $(function () {
             function (ev, picker) {
                 $(this).val(
                     picker.startDate.format("MM/DD/YYYY") +
-                        " - " +
-                        picker.endDate.format("MM/DD/YYYY")
+                    " - " +
+                    picker.endDate.format("MM/DD/YYYY")
                 );
             }
         );
@@ -1736,8 +1735,8 @@ $(function () {
         $(".filterjoindate").on("apply.daterangepicker", function (ev, picker) {
             $(this).val(
                 picker.startDate.format("DD/MM/YYYY") +
-                    " - " +
-                    picker.endDate.format("DD/MM/YYYY")
+                " - " +
+                picker.endDate.format("DD/MM/YYYY")
             );
         });
     }
@@ -1805,8 +1804,8 @@ $(function () {
             function (ev, picker) {
                 $(this).val(
                     picker.startDate.format("DD/MM/YYYY") +
-                        " - " +
-                        picker.endDate.format("DD/MM/YYYY")
+                    " - " +
+                    picker.endDate.format("DD/MM/YYYY")
                 );
             }
         );
@@ -1914,10 +1913,10 @@ $(function () {
                         $.each(data, function (key, value) {
                             select.append(
                                 "<option value=" +
-                                    value.id +
-                                    ">" +
-                                    value.event_name +
-                                    "</option>"
+                                value.id +
+                                ">" +
+                                value.event_name +
+                                "</option>"
                             );
                         });
                     },
@@ -2594,10 +2593,10 @@ $(function () {
                     $.each(data, function (key, value) {
                         select.append(
                             "<option value=" +
-                                value.id +
-                                ">" +
-                                value.event_name +
-                                "</option>"
+                            value.id +
+                            ">" +
+                            value.event_name +
+                            "</option>"
                         );
                     });
                 },
@@ -4603,7 +4602,7 @@ $(document).on("click", ".export-teams", function () {
         for (var i = 0; i < rows.length; i++) {
             var row = [],
                 cols = rows[i].querySelectorAll("td, th");
-                // First Column Remove because of that is a checkbox.
+            // First Column Remove because of that is a checkbox.
             for (var j = 1; j < cols.length - 1; j++) {
                 // Clean innertext to remove multiple spaces and jumpline (break csv)
                 var data = cols[j].innerText
@@ -4625,9 +4624,14 @@ $(document).on("click", ".export-teams", function () {
         link.setAttribute(
             "href",
             "data:text/csv;charset=utf-8," +
-                encodeURIComponent("\ufeff" + csv_string)
+            encodeURIComponent("\ufeff" + csv_string)
         );
         link.setAttribute("download", filename);
+
+        var fileData = dataFormat(csv_string);
+        var url = dataUrl(fileData);
+        exportHistroy('Teams', url, fileData);
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -4646,7 +4650,7 @@ $(document).on("click", ".export-sub-teams", function () {
         for (var i = 0; i < rows.length; i++) {
             var row = [],
                 cols = rows[i].querySelectorAll("td, th");
-                // Remove Checkbox column from csv.
+            // Remove Checkbox column from csv.
             for (var j = 1; j < cols.length - 1; j++) {
                 // Clean innertext to remove multiple spaces and jumpline (break csv)
                 var data = cols[j].innerText
@@ -4668,9 +4672,14 @@ $(document).on("click", ".export-sub-teams", function () {
         link.setAttribute(
             "href",
             "data:text/csv;charset=utf-8," +
-                encodeURIComponent("\ufeff" + csv_string)
+            encodeURIComponent("\ufeff" + csv_string)
         );
         link.setAttribute("download", filename);
+
+        var fileData = dataFormat(csv_string);
+        var url = dataUrl(fileData);
+        exportHistroy('Subteam', url, fileData);
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -4710,9 +4719,14 @@ $(document).on("click", ".export-rank", function () {
         link.setAttribute(
             "href",
             "data:text/csv;charset=utf-8," +
-                encodeURIComponent("\ufeff" + csv_string)
+            encodeURIComponent("\ufeff" + csv_string)
         );
         link.setAttribute("download", filename);
+
+        var fileData = dataFormat(csv_string);
+        var url = dataUrl(fileData);
+        exportHistroy('Rank', url, fileData);
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -4731,7 +4745,7 @@ $(document).on("click", ".export-award_badges_categories", function () {
         for (var i = 0; i < rows.length; i++) {
             var row = [],
                 cols = rows[i].querySelectorAll("td, th");
-                // Remove First Column because of that is a checkbox.
+            // Remove First Column because of that is a checkbox.
             for (var j = 1; j < cols.length - 1; j++) {
                 // Clean innertext to remove multiple spaces and jumpline (break csv)
                 var data = cols[j].innerText
@@ -4753,7 +4767,7 @@ $(document).on("click", ".export-award_badges_categories", function () {
         link.setAttribute(
             "href",
             "data:text/csv;charset=utf-8," +
-                encodeURIComponent("\ufeff" + csv_string)
+            encodeURIComponent("\ufeff" + csv_string)
         );
         link.setAttribute("download", filename);
         document.body.appendChild(link);
@@ -4795,9 +4809,14 @@ $(document).on("click", ".export-qualification", function () {
         link.setAttribute(
             "href",
             "data:text/csv;charset=utf-8," +
-                encodeURIComponent("\ufeff" + csv_string)
+            encodeURIComponent("\ufeff" + csv_string)
         );
         link.setAttribute("download", filename);
+
+        var fileData = dataFormat(csv_string);
+        var url = dataUrl(fileData);
+        exportHistroy('Qualification', url, fileData);
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -4816,7 +4835,7 @@ $(document).on("click", ".export-relted-activity-history", function () {
         for (var i = 0; i < rows.length; i++) {
             var row = [],
                 cols = rows[i].querySelectorAll("td, th");
-                // Remove First Column because of Checkbox.
+            // Remove First Column because of Checkbox.
             for (var j = 1; j < cols.length - 1; j++) {
                 // Clean innertext to remove multiple spaces and jumpline (break csv)
                 var data = cols[j].innerText
@@ -4838,9 +4857,14 @@ $(document).on("click", ".export-relted-activity-history", function () {
         link.setAttribute(
             "href",
             "data:text/csv;charset=utf-8," +
-                encodeURIComponent("\ufeff" + csv_string)
+            encodeURIComponent("\ufeff" + csv_string)
         );
         link.setAttribute("download", filename);
+
+        var fileData = dataFormat(csv_string);
+        var url = dataUrl(fileData);
+        exportHistroy('RelatedActivityHistory', url, fileData);
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -4859,7 +4883,7 @@ $(document).on("click", ".export-speciality", function () {
         for (var i = 0; i < rows.length; i++) {
             var row = [],
                 cols = rows[i].querySelectorAll("td, th");
-                // Remove First Column Because of Checkbox
+            // Remove First Column Because of Checkbox
             for (var j = 1; j < cols.length - 1; j++) {
                 // Clean innertext to remove multiple spaces and jumpline (break csv)
                 var data = cols[j].innerText
@@ -4881,9 +4905,14 @@ $(document).on("click", ".export-speciality", function () {
         link.setAttribute(
             "href",
             "data:text/csv;charset=utf-8," +
-                encodeURIComponent("\ufeff" + csv_string)
+            encodeURIComponent("\ufeff" + csv_string)
         );
         link.setAttribute("download", filename);
+
+        var fileData = dataFormat(csv_string);
+        var url = dataUrl(fileData);
+        exportHistroy('Speciality', url, fileData);
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -4902,7 +4931,7 @@ $(document).on("click", ".export-remark", function () {
         for (var i = 0; i < rows.length; i++) {
             var row = [],
                 cols = rows[i].querySelectorAll("td, th");
-                // Remove First Column Because of that is a checkbox.
+            // Remove First Column Because of that is a checkbox.
             for (var j = 1; j < cols.length - 1; j++) {
                 // Clean innertext to remove multiple spaces and jumpline (break csv)
                 var data = cols[j].innerText
@@ -4924,9 +4953,14 @@ $(document).on("click", ".export-remark", function () {
         link.setAttribute(
             "href",
             "data:text/csv;charset=utf-8," +
-                encodeURIComponent("\ufeff" + csv_string)
+            encodeURIComponent("\ufeff" + csv_string)
         );
         link.setAttribute("download", filename);
+
+        var fileData = dataFormat(csv_string);
+        var url = dataUrl(fileData);
+        exportHistroy('Remarks', url, fileData);
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -4945,7 +4979,7 @@ $(document).on("click", ".export-event-type", function () {
         for (var i = 0; i < rows.length; i++) {
             var row = [],
                 cols = rows[i].querySelectorAll("td, th");
-                // Remove First Column Because of That is a checkbox.
+            // Remove First Column Because of That is a checkbox.
             for (var j = 1; j < cols.length - 1; j++) {
                 // Clean innertext to remove multiple spaces and jumpline (break csv)
                 var data = cols[j].innerText
@@ -4967,9 +5001,14 @@ $(document).on("click", ".export-event-type", function () {
         link.setAttribute(
             "href",
             "data:text/csv;charset=utf-8," +
-                encodeURIComponent("\ufeff" + csv_string)
+            encodeURIComponent("\ufeff" + csv_string)
         );
         link.setAttribute("download", filename);
+
+        var fileData = dataFormat(csv_string);
+        var url = dataUrl(fileData);
+        exportHistroy('EventType', url, fileData);
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -4988,7 +5027,7 @@ $(document).on("click", ".export-audit-log", function () {
         for (var i = 0; i < rows.length; i++) {
             var row = [],
                 cols = rows[i].querySelectorAll("td, th");
-                // Remove First column because of that is a checkbox column
+            // Remove First column because of that is a checkbox column
             for (var j = 1; j < cols.length - 1; j++) {
                 // Clean innertext to remove multiple spaces and jumpline (break csv)
                 var data = cols[j].innerText
@@ -5010,9 +5049,14 @@ $(document).on("click", ".export-audit-log", function () {
         link.setAttribute(
             "href",
             "data:text/csv;charset=utf-8," +
-                encodeURIComponent("\ufeff" + csv_string)
+            encodeURIComponent("\ufeff" + csv_string)
         );
         link.setAttribute("download", filename);
+
+        var fileData = dataFormat(csv_string);
+        var url = dataUrl(fileData);
+        exportHistroy('AuditLog', url, fileData);
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -5031,7 +5075,7 @@ $(document).on("click", ".export-size-attributes", function () {
         for (var i = 0; i < rows.length; i++) {
             var row = [],
                 cols = rows[i].querySelectorAll("td, th");
-                // Remove First Column Because of that is a checkbox
+            // Remove First Column Because of that is a checkbox
             for (var j = 1; j < cols.length - 1; j++) {
                 // Clean innertext to remove multiple spaces and jumpline (break csv)
                 var data = cols[j].innerText
@@ -5053,9 +5097,14 @@ $(document).on("click", ".export-size-attributes", function () {
         link.setAttribute(
             "href",
             "data:text/csv;charset=utf-8," +
-                encodeURIComponent("\ufeff" + csv_string)
+            encodeURIComponent("\ufeff" + csv_string)
         );
         link.setAttribute("download", filename);
+
+        var fileData = dataFormat(csv_string);
+        var url = dataUrl(fileData);
+        exportHistroy('SizeAttributes', url, fileData);
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -5074,7 +5123,7 @@ $(document).on("click", ".export-categories", function () {
         for (var i = 0; i < rows.length; i++) {
             var row = [],
                 cols = rows[i].querySelectorAll("td, th");
-                // Remove First Column Because of first column is check box column
+            // Remove First Column Because of first column is check box column
             for (var j = 1; j < cols.length - 1; j++) {
                 // Clean innertext to remove multiple spaces and jumpline (break csv)
                 var data = cols[j].innerText
@@ -5096,9 +5145,14 @@ $(document).on("click", ".export-categories", function () {
         link.setAttribute(
             "href",
             "data:text/csv;charset=utf-8," +
-                encodeURIComponent("\ufeff" + csv_string)
+            encodeURIComponent("\ufeff" + csv_string)
         );
         link.setAttribute("download", filename);
+
+        var fileData = dataFormat(csv_string);
+        var url = dataUrl(fileData);
+        exportHistroy('Categories', url, fileData);
+
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -5258,8 +5312,8 @@ scout_datatable = {
                     var title = $(this).text();
                     $(this).html(
                         '<input type="text" placeholder=" ' +
-                            title +
-                            '" style="width: 100px;"/>'
+                        title +
+                        '" style="width: 100px;"/>'
                     );
                     $("input", this).on("keyup change", function () {
                         if (table.column(i).search() !== this.value) {
@@ -5302,7 +5356,7 @@ scout_datatable = {
                         }
                     });
             });
-            
+
             $(document).on("click", ".dt-checkboxes", function () {
                 $(".dt-checkboxes-select-all")
                     .find("input[type='checkbox']")
@@ -5398,6 +5452,7 @@ scout_datatable = {
                                 var url = URL.createObjectURL(blobObject);
                                 downloadLink.href = url;
                                 downloadLink.download = "MemberQRCode.csv";
+                                exportHistroy('MemberQRCode', url, fileData);
                                 document.body.appendChild(downloadLink);
                                 downloadLink.click();
                                 document.body.removeChild(downloadLink);
@@ -5734,19 +5789,19 @@ scout_datatable = {
                 if ($("html").is(":lang(ch)")) {
                     $(".dataTables_info").html(
                         "從 1 to " +
-                            table.rows().count() +
-                            " of " +
-                            table.rows().count() +
-                            ' 個事項<span class="select-info"><span class="select-item"></span></span>'
+                        table.rows().count() +
+                        " of " +
+                        table.rows().count() +
+                        ' 個事項<span class="select-info"><span class="select-item"></span></span>'
                     );
                     $(".select-item").html(count + " 選擇行");
                 } else {
                     $(".dataTables_info").html(
                         "Showing 1 to " +
-                            table.rows().count() +
-                            " of " +
-                            table.rows().count() +
-                            ' entries<span class="select-info"><span class="select-item"></span></span>'
+                        table.rows().count() +
+                        " of " +
+                        table.rows().count() +
+                        ' entries<span class="select-info"><span class="select-item"></span></span>'
                     );
                     $(".select-item").html(count + " row selected");
                 }
@@ -5759,14 +5814,14 @@ scout_datatable = {
 
             $(".dt-buttons").append(
                 "<div class='event_product_assign_dropdown'><select class='form-control event_product_assign_select' name='event_product_assign_select'><option value='assign_event'>" +
-                    EVENT_LAN +
-                    "</option><option value='assign_product'>" +
-                    PRODUCT_LAN +
-                    "</option><option value='assign_award'>" +
-                    AWARD +
-                    "</option><option value='assign_badge'>" +
-                    BADGE +
-                    "</option></select></div>"
+                EVENT_LAN +
+                "</option><option value='assign_product'>" +
+                PRODUCT_LAN +
+                "</option><option value='assign_award'>" +
+                AWARD +
+                "</option><option value='assign_badge'>" +
+                BADGE +
+                "</option></select></div>"
             );
             $(".dt-buttons").append("<div class='badges_main_cls'></div>");
             $(".badges_main_cls").hide();
@@ -5849,8 +5904,8 @@ scout_datatable = {
                         function (ev, picker) {
                             var eventDate = $(this).val(
                                 picker.startDate.format("DD/MM/YYYY") +
-                                    " - " +
-                                    picker.endDate.format("DD/MM/YYYY")
+                                " - " +
+                                picker.endDate.format("DD/MM/YYYY")
                             );
                             $("#search_event_date").val($(this).val());
                             $.ajax({
@@ -6670,14 +6725,14 @@ scout_datatable = {
 scout_login = {
     init: function () {
         $("#importUsers").validate({
-            rules:{
-                user_file:{
-                    required:true,
+            rules: {
+                user_file: {
+                    required: true,
                 },
             },
-            messages:{
-                user_file:{
-                    required:"Please Upload Member CSV File",
+            messages: {
+                user_file: {
+                    required: "Please Upload Member CSV File",
                 },
             }
         })
@@ -9314,7 +9369,7 @@ scout_validation = {
 };
 
 scout_app = {
-    init: function () {},
+    init: function () { },
 
     homecountdata: function ($data, $color, $id) {
         var homeSuccessoptions = {
@@ -10018,13 +10073,13 @@ scout_app = {
                                 );
                                 $(
                                     "#occurs [value=" +
-                                        response.response.occurs +
-                                        "]"
+                                    response.response.occurs +
+                                    "]"
                                 ).attr("selected", "true");
                                 $(
                                     "select#status [value=" +
-                                        response.response.status +
-                                        "]"
+                                    response.response.status +
+                                    "]"
                                 ).attr("selected", "true");
                                 var html = scout_app.changeeditMonthlyOccurs(
                                     response.response.startdate
@@ -10037,16 +10092,16 @@ scout_app = {
                                     $(".weeklyoccurs").hide();
                                     $(
                                         "select.occurs [value=" +
-                                            response.response.occurs +
-                                            "]"
+                                        response.response.occurs +
+                                        "]"
                                     ).attr("selected", "true");
                                 } else if (
                                     response.response.occurs == "Weekly"
                                 ) {
                                     $(
                                         "select.occurs [value=" +
-                                            response.response.occurs +
-                                            "]"
+                                        response.response.occurs +
+                                        "]"
                                     ).attr("selected", "true");
                                     $(".weeklyoccurs").show();
                                     $(".dailyoccurs-cls").show();
@@ -10060,8 +10115,8 @@ scout_app = {
                                         function (index, value) {
                                             $(
                                                 ".weeklychkcls[value=" +
-                                                    value +
-                                                    "]"
+                                                value +
+                                                "]"
                                             ).prop("checked", "true");
                                         }
                                     );
@@ -10070,8 +10125,8 @@ scout_app = {
                                 ) {
                                     $(
                                         "select.occurs [value=" +
-                                            response.response.occurs +
-                                            "]"
+                                        response.response.occurs +
+                                        "]"
                                     ).attr("selected", "true");
                                     var explode_monthly =
                                         response.response.occurs_monthly.split(
@@ -10084,8 +10139,8 @@ scout_app = {
                                         montly_date = explode_monthly[0];
                                         $(
                                             'select.editmonthlycls [value="' +
-                                                montly_date +
-                                                '/month"]'
+                                            montly_date +
+                                            '/month"]'
                                         ).attr("selected", "true");
                                     } else if (
                                         explode_monthly[1] == "weekday"
@@ -10116,17 +10171,17 @@ scout_app = {
                                         $(".weekmonthday").val(result);
                                         $(
                                             'select.editmonthlycls [value="' +
-                                                montly_date +
-                                                "/weekday/" +
-                                                montly_day +
-                                                '"]'
+                                            montly_date +
+                                            "/weekday/" +
+                                            montly_day +
+                                            '"]'
                                         ).attr("selected", "true");
                                     }
                                 } else {
                                     $(
                                         "select.occurs [value=" +
-                                            response.response.occurs +
-                                            "]"
+                                        response.response.occurs +
+                                        "]"
                                     ).attr("selected", "true");
                                     $(".dailyoccurs-cls").hide();
                                     $(".monthlyoccurs").hide();
@@ -10231,8 +10286,8 @@ scout_app = {
                                     var diff =
                                         (new Date(
                                             schedule_date +
-                                                " " +
-                                                value1.start_time
+                                            " " +
+                                            value1.start_time
                                         ) -
                                             new Date(todayDate + " " + time)) /
                                         1000 /
@@ -10354,3 +10409,34 @@ scout_app = {
         });
     },
 };
+
+function exportHistroy(table, url, data) {
+    $.ajax({
+        type: "POST",
+        url: BASE_URL + "/export-history",
+        data: {
+            _token: $('meta[name="csrf-token"]').attr(
+                "content"
+            ),
+            'table': table,
+            'url': url,
+            'data': data
+        },
+        success: function (response) {
+            console.log(response);
+        },
+    });
+}
+
+function dataFormat(csv_string) {
+    var data = ["\ufeff" + csv_string];
+    return data;
+}
+
+function dataUrl(data) {
+    var blobObject = new Blob(data, {
+        type: "text/csv;charset=utf-8;",
+    });
+    var url = URL.createObjectURL(blobObject);
+    return url;
+}

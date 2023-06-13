@@ -106,6 +106,4 @@ return [
             resource_path('views/vendor/mail'),
         ],
     ],
-
-    'cron_job_send_email_address' => 'hkarmy2022@g4hk.com',
 ];

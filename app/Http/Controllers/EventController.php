@@ -933,6 +933,7 @@ class EventController extends Controller {
 									$assign->cost_type = !empty($request->postType) ? $request->postType : NULL;
 									$assign->cost_type_id = !empty($request->posttypeId) ? $request->posttypeId : NULL;
 									$assign->save();
+									$id = $assign->id;
 
 									// Member used money
 									$MemberUsedMoney = new MemberUsedToken;
@@ -963,6 +964,7 @@ class EventController extends Controller {
 										$assign->cost_type = !empty($request->postType) ? $request->postType : NULL;
 										$assign->cost_type_id = !empty($request->posttypeId) ? $request->posttypeId : NULL;
 										$assign->save();
+										$id = $assign->id;
 
 										// Member used token
 										$MemberUsedToken = new MemberUsedToken;
@@ -996,6 +998,7 @@ class EventController extends Controller {
 										$assign->cost_type = !empty($request->postType) ? $request->postType : NULL;
 										$assign->cost_type_id = !empty($request->posttypeId) ? $request->posttypeId : NULL;
 										$assign->save();
+										$id = $assign->id;
 
 										// Member used money + token
 										$MemberUsedMoneyToken = new MemberUsedToken;
@@ -1024,6 +1027,7 @@ class EventController extends Controller {
 								$assign->user_id = !empty($user_id) ? $user_id : NULL;
 								$assign->remark = !empty($request->remarks) ? $request->remarks : NULL;
 								$assign->save();
+								$id = $assign->id;
 								$assignExisting = true;
 							}
 						}
@@ -1086,6 +1090,10 @@ class EventController extends Controller {
 				// 	$message->to($usersemail);
 				// });
 			}
+			$assignTo = User::find($user_id)->English_name;
+			$assignBy =  Session::get('user')['username'];
+			$getData =  ['Event' => $event_name, 'event_type' => $event_type, 'assign_to_user' => $assignTo, 'assign_by_user' => $assignBy];
+		    Helper::InsertAuditLogfuncation($getData, $id, 'EventAssign', 'Event');
 			if ($assignExisting) {
 				return response()->json(['status' => true, 'message' => "Assign User successfully."]);
 			} else {

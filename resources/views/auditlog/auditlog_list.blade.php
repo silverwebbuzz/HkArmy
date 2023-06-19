@@ -31,6 +31,8 @@
 								<option value="Member">{{__('languages.Member')}}</option>
 								<option value="Event">{{__('languages.Event')}}</option>
 								<option value="Attendance">{{__('languages.Attendance.Attendance')}}</option>
+								<option value="Export">{{__('languages.Export')}}</option>
+								<option value="Product">{{__('languages.export_Product')}}</option>
 							</select>
 						</fieldset>
 					</div>
@@ -76,8 +78,9 @@
 											</tr>
 										</thead>
 										<tbody>
-											@if($auditlog)
-											@foreach($auditlog as $val)
+											@if($dateWiseAuditLog)
+											@foreach($dateWiseAuditLog as $auditlog)
+												@foreach($auditlog as $val)
 												<tr>
 													<td>
 														<input type="checkbox" name="allAuditIDs[]" class="select-Audit-chkbox" value="{{$val['id']}}">
@@ -105,10 +108,11 @@
 															}
 														@endphp
 													</td>
-													<td><a href="{{ url('audit-log/show',$val['id']) }}"><i class="bx bx-show-alt"></i></a>
+													<td><a href="{{ url('audit-log/show',[$val['user_id'], $val['date']]) }}"><i class="bx bx-show-alt"></i></a>
 														<a href="javascript:void(0);" data-id="{{ $val['id'] }}" class="deletelog"><i class="bx bx-trash-alt"></i></a>
 													</td>
 												</tr>
+												@endforeach
 											@endforeach
 											@endif
 										</tbody>

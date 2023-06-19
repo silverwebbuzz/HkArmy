@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+	<meta name="description" content=" admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+	<meta name="keywords" content="admin template,  admin template, dashboard template, flat admin template, responsive admin template, web app">
+	<meta name="author" content="PIXINVENT">
+	<title>Add Event - Scout - Bootstrap HTML admin template</title>
+	<link rel="apple-touch-icon" href="../app-assets/images/ico/S_blue.png">
+	<link rel="shortcut icon" type="image/x-icon" href="../app-assets/images/ico/favicon.ico">
+	<link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
+
+	<!-- BEGIN: Vendor CSS-->
+	<link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/vendors.min.css">
+	<link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/charts/apexcharts.css">
+	<link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/extensions/dragula.min.css">
+	 <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/pickers/pickadate/pickadate.css">
+	<link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/pickers/daterange/daterangepicker.css">
+	<!-- END: Vendor CSS-->
+
+	<!-- BEGIN: Theme CSS-->
+	<link rel="stylesheet" type="text/css" href="../app-assets/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="../app-assets/css/bootstrap-extended.css">
+	<link rel="stylesheet" type="text/css" href="../app-assets/css/colors.css">
+	<link rel="stylesheet" type="text/css" href="../app-assets/css/components.css">
+	<link rel="stylesheet" type="text/css" href="../app-assets/css/themes/dark-layout.css">
+	<link rel="stylesheet" type="text/css" href="../app-assets/css/themes/semi-dark-layout.css">
+	<!-- END: Theme CSS-->
+
+	<!-- BEGIN: Page CSS-->
+	<link rel="stylesheet" type="text/css" href="../app-assets/css/core/menu/menu-types/vertical-menu.css">
+	<link rel="stylesheet" type="text/css" href="../app-assets/css/pages/dashboard-analytics.css">
+	<!-- END: Page CSS-->
+
+	<!-- BEGIN: Custom CSS-->
+	<link rel="stylesheet" type="text/css" href="../assets/css/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/jquery.timepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/fullcalendar.min.css">
+	<link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern boxicon-layout no-card-shadow 2-columns  navbar-sticky footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+
+	<!-- BEGIN: Header-->
+	<div class="header-navbar-shadow"></div>
+	<nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
+		<div class="navbar-wrapper">
+			<div class="navbar-container content">
+				<div class="navbar-collapse" id="navbar-mobile">
+					<div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+						<ul class="nav navbar-nav">
+							<li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon bx bx-menu"></i></a></li>
+						</ul>
+					</div>
+					<ul class="nav navbar-nav float-right">
+						<li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="selected-language">中文 </span></a>
+							<div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="../html/ch/add-event.html" data-language="en">中文 </a><a class="dropdown-item" href="../html/en/add-event.html" data-language="fr">English</a></div>
+						</li>
+						<li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+								<div class="user-nav d-sm-flex d-none"><span class="user-name">John Doe</span><span class="user-status text-muted">在線</span></div><span><img class="round" src="../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"></span>
+							</a>
+							<div class="dropdown-menu dropdown-menu-right pb-0">
+								<a class="dropdown-item" href="page-user-profile.html"><i class="bx bx-user mr-50"></i> 編輯個人資料</a>
+								<a class="dropdown-item" href="auth-login.html"><i class="bx bx-power-off mr-50"></i> 登出</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- END: Header-->
+
+
+	<!-- BEGIN: Main Menu-->
+	<div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+		<div class="navbar-header">
+			<ul class="nav navbar-nav flex-row">
+				<li class="nav-item mr-auto"><a class="navbar-brand" href="../html/ch/index.html">
+						 <div class="brand-logo"><img class="logo" src="../app-assets/images/logo/S_blue.png" /></div>
+						<h2 class="brand-text mb-0">香港青少年軍</h2>
+					</a></li>
+				<!-- <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="bx bx-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon bx bx-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="bx-disc"></i></a></li> -->
+			</ul>
+		</div>
+		<div class="shadow-bottom"></div>
+		<div class="main-menu-content">
+		   <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="">
+				<li class="nav-item"><a href="index.html"><i class="bx bx-home-alt"></i><span class="menu-title" data-i18n="Dashboard">儀表盤</span></a>
+				</li>
+				<li class="nav-item"><a href="page-users-list.html"><i class="bx bx-user-plus"></i><span class="menu-title" data-i18n="User">團員</span></a>
+				</li>
+				
+				<!--<li class=" nav-item"><a href="activity-management.html"><i class="bx bx-run"></i><span class="menu-title" data-i18n="Dashboard">活動管理</span></a>-->
+				<!--</li>-->
+				<li class="active nav-item"><a href="event-management.html"><i class="bx bx-calendar-event"></i><span class="menu-title" data-i18n="Dashboard">活動管理</span></a>
+					</li>
+				</li>
+				<li class=" nav-item"><a href="attendance.html"><i class="bx bxs-book-open"></i><span class="menu-title" data-i18n="Dashboard">考勤管理</span></a>
+				</li>
+				<li class=" nav-item"><a href="role-management.html"><i class="bx bx-user"></i></i><span class="menu-title" data-i18n="Dashboard">職能權限管理</span></a>
+				</li>
+				
+				<li class="nav-item"><a href="#"><i class="bx bxs-user-detail"></i><span class="menu-title" data-i18n="User">制服換領/購買紀錄</span></a>
+					<ul class="menu-content">
+						<li><a href="product-list.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="List">產品</span></a>
+						</li>
+						<li><a href="purchase-product-list.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">添加產品購買</span></a>
+						</li>
+						<li><a href="product-list-card.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">Product List</span></a>
+						</li>
+						<li><a href="cart.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">Cart</span></a>
+						</li>
+						<li><a href="checkout.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">Checkout</span></a>
+						</li>
+					</ul>
+				</li>
+				<li class="nav-item"><a href="#"><i class="bx bxs-user-detail"></i><span class="menu-title" data-i18n="User">設置</span></a>
+					<ul class="menu-content">
+						 <li class=" nav-item"><a href="team.html"><i class="bx bx-group"></i><span class="menu-title" data-i18n="Dashboard">縱隊</span></a>
+						</li>
+						<li class=" nav-item"><a href="rank.html"><i class="bx bx-group"></i><span class="menu-title" data-i18n="Dashboard">軍銜</span></a>
+						</li>
+						<li class=" nav-item"><a href="hour.html"><i class="bx bx-group"></i><span class="menu-title" data-i18n="Dashboard">時數</span></a>
+						</li>
+						<li class="nav-item"><a href="awards-badge.html"><i class="bx bx-trophy"></i><span class="menu-title" data-i18n="Dashboard">獎項</span></a></li>
+						<li class="nav-item"><a href="badge.html"><i class="bx bx-trophy"></i><span class="menu-title" data-i18n="Dashboard">獎章</span></a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- END: Main Menu-->
+	<div class="app-content content">
+		<div class="content-overlay"></div>
+		<div class="content-wrapper">
+			<div class="content-header row">
+				  <div class="content-header-left col-12 mb-2 mt-1">
+					<div class="row">
+					  <div class="col-12">
+						<h3 class="content-header-title float-left pr-1 mb-0">添加活動</h3>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			<div class="content-body">
+				<!-- Basic Dropdowns Start -->
+				<section id="basic-dropdown">
+					<div class="row">
+						<div class="col-12">
+							<div class="card">
+								<div class="card-content">
+									<div class="card-body">
+										<form action="index.html">
+											<div class="form-row">
+												<div class="form-group col-md-6 mb-50">
+													<label class="text-bold-600" for="exampleInputUsername1">活動名稱</label>
+													<input type="text" class="form-control" id="exampleInputUsername1" placeholder="活動名稱" value="">
+												</div>
+												<div class="form-group col-md-6 mb-50">
+													<label class="text-bold-600" for="exampleInputUsername1">活動號碼</label>
+													<input type="text" class="form-control" id="exampleInputUsername1" placeholder="活動號碼" value="0001" readonly="">
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-6 mb-50">
+													<label for="users-list-role">活動類型</label>
+												<fieldset class="form-group">
+													<fieldset class="form-group">
+														<select class="form-control" id="users-list-role">
+														 	<option value="Training">Training</option>
+														  	<option value="Activity">Activity</option>
+															<optgroup label="Service">
+																<option value="honour">guard of honour</option>
+															  	<option value="community">community</option>
+															  	<option value="Headquatters">Headquatters</option>
+															  	<option value="administration">administration</option>
+															  	<option value="other">other</option>
+															</optgroup>
+													  	</select>
+													</fieldset>
+												</fieldset>
+												</div>
+												<div class="form-group col-md-3 mb-50">
+													<label class="text-bold-600" for="exampleInputUsername1">需要評核?</label>
+												<ul class="list-unstyled mb-0">
+													 <li class="d-inline-block my-1 mr-1 mb-1">
+														<fieldset>
+															<div class="custom-control custom-radio">
+																<input type="radio" class="custom-control-input" name="customRadio" id="customRadio2" value="Yes">
+																<label class="custom-control-label" for="customRadio2">是</label>
+															</div>
+														</fieldset>
+													</li>
+													<li class="d-inline-block mt-1 mr-1 mb-1">
+														<fieldset>
+															<div class="custom-control custom-radio">
+																<input type="radio" class="custom-control-input" name="customRadio" id="customRadio1" value="No">
+																<label class="custom-control-label" for="customRadio1">無</label>
+															</div>
+														</fieldset>
+													</li>
+												</ul>
+												</div>
+												<div class="form-group col-md-3 mb-50">
+													<div class="form-row health-decl-cls">
+														<div class="form-group col-md-12 mb-50">
+															<label class="text-bold-600" for="exampleInputUsername1"></label>
+															<input type="text" class="form-control" id="Experience" placeholder="需要評核" value="">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-6 mb-50">
+													<label class="text-bold-600" for="exampleInputUsername1">Event Type</label>
+													<ul class="list-unstyled mb-0">
+														 <li class="d-inline-block my-1 mr-1 mb-1">
+															<fieldset>
+																<div class="custom-control custom-radio">
+																	<input type="radio" class="custom-control-input" name="eventselect" id="customRadio3" value="singleevent" checked>
+																	<label class="custom-control-label" for="customRadio3">Single Event</label>
+																</div>
+															</fieldset>
+														</li>
+														<li class="d-inline-block mt-1 mr-1 mb-1">
+															<fieldset>
+																<div class="custom-control custom-radio">
+																	<input type="radio" class="custom-control-input" name="eventselect" id="customRadio4" value="recurringevent">
+																	<label class="custom-control-label" for="customRadio4">Recurring Events</label>
+																</div>
+															</fieldset>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<div class="form-row dateselect">
+												<div class="form-group col-md-3 mb-50">
+													<label class="text-bold-600" for="exampleInputUsername1">開始日期</label>
+													<fieldset class="form-group position-relative has-icon-left">
+														<input type="text" class="form-control startdate" placeholder="開始日期">
+														<div class="form-control-position">
+															<i class='bx bx-calendar'></i>
+														</div>
+													</fieldset>
+												</div>
+												<div class="form-group col-md-3 mb-50">
+													<div class="form-group">
+														<label class="text-bold-600" for="exampleInputUsername1">起始時間</label>
+															<input type="text" name="starttime" value="" id="start_time" class="form-control col-md-7 col-xs-12 starttime" placeholder="起始時間" autocomplete="off">
+													</div>
+												</div>
+												<div class="form-group col-md-3 mb-50">
+													<label class="text-bold-600" for="exampleInputUsername1">結束日期</label>
+													<fieldset class="form-group position-relative has-icon-left">
+														<input type="text" class="form-control enddate" placeholder="結束日期">
+														<div class="form-control-position">
+															<i class='bx bx-calendar'></i>
+														</div>
+													</fieldset>
+												</div>
+												<div class="form-group col-md-3 mb-50">
+													<div class="form-group">
+														<label class="text-bold-600" for="exampleInputUsername1">時間到</label>
+														<input type="text" name="endtime" value="" id="endtime" class="form-control col-md-7 col-xs-12 endtime" placeholder="時間到" autocomplete="off">
+													</div>
+												</div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-6 mb-50 event-hours-cls">
+													<label class="text-bold-600" for="exampleInputUsername1">活動時間</label>
+													<input type="text" class="form-control" value="35" readonly="">
+												</div>
+											</div>
+											<div class="form-row add-evens-cls">
+												<div class="form-group col-md-12 mb-50">
+													<button type="button" class="btn btn-primary glow position-relative addevents">Add Dates</button>
+												</div>
+											</div>
+											<div class="form-row">
+												<div id="calendar" height="300px;"></div>
+											</div>
+											<div class="form-row">
+												<div class="form-group col-md-6 mb-50">
+													<label for="users-list-role">狀態</label>
+													<fieldset class="form-group">
+														<select class="form-control" id="users-list-role">
+															<option value="" selected="">草案</option>
+															<option value="">已發表</option>
+															<option value="">未發表</option>
+														</select>
+													</fieldset>
+												</div>
+											</div>
+											<button type="submit" class="btn btn-primary glow position-relative submit">提交</button>
+										</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Basic Dropdown End -->
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade assign-tq" id="eventmodel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+				<div class="modal-dialog modal-dialog-centered" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Add Event</h5>
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+							</button>
+						</div>
+						<div class="modal-body">
+							<div class="form-row">
+								<div class="form-group col-md-12 mb-50">
+									<label class="text-bold-600" for="exampleInputUsername1">Start Date</label>
+									<fieldset class="form-group position-relative has-icon-left">
+										<input type="text" class="form-control eventstartdate" placeholder="Select Date" id="eventstartdate">
+										<div class="form-control-position">
+											<i class='bx bx-calendar'></i>
+										</div>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-6 mb-50">
+									<label class="text-bold-600" for="exampleInputUsername1">Start Time</label>
+									<input type="text" class="form-control eventstarttime" placeholder="Select time" id="eventstarttime">
+								</div>
+								<div class="form-group col-md-6 mb-50">
+									<label class="text-bold-600" for="exampleInputUsername1">End Time</label>
+									<input type="text" class="form-control eventendtime" placeholder="Select time" id="eventendtime">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-12 mb-50">
+									<label class="text-bold-600" for="exampleInputUsername1">Total Hours</label>
+									<input type="text" class="form-control totaleventhours"id="totaleventhours" value="4" readonly="">
+								</div>
+							</div>
+							<div class="form-row">
+								<div class="form-group col-md-12 mb-50">
+									<label for="users-list-role">Occurs</label>
+									<fieldset class="form-group">
+										<select class="form-control occurs" id="occurs" name="occurs">
+											<option value="">Select occurs</option>
+											<option value="Once">Once</option>
+											<option value="Daily">Daily</option>
+											<option value="Weekly">Weekly</option>
+											<option value="Monthly">Monthly</option>
+										</select>
+									</fieldset>
+								</div>
+							</div>
+							<div class="form-row weeklyoccurs">
+								<div class="form-group col-md-12 mb-50">
+									<ul class="list-unstyled mb-0">
+										<li class="d-inline-block mr-1 mb-1">
+											<fieldset>
+												<div class="checkbox">
+													<input type="checkbox" class="checkbox-input" id="checkbox2">
+													<label for="checkbox2">Su</label>
+												</div>
+											</fieldset>
+										</li>
+										<li class="d-inline-block mr-1 mb-1">
+											<fieldset>
+												<div class="checkbox">
+													<input type="checkbox" id="checkbox3">
+													<label for="checkbox3">Mo</label>
+												</div>
+											</fieldset>
+										</li>
+										<li class="d-inline-block mr-1 mb-1">
+											<fieldset>
+												<div class="checkbox">
+													<input type="checkbox" id="checkbox4">
+													<label for="checkbox4">Tu</label>
+												</div>
+											</fieldset>
+										</li>
+										<li class="d-inline-block mr-1 mb-1">
+											<fieldset>
+												<div class="checkbox">
+													<input type="checkbox" id="checkbox5">
+													<label for="checkbox5">We</label>
+												</div>
+											</fieldset>
+										</li>
+										<li class="d-inline-block mr-1 mb-1">
+											<fieldset>
+												<div class="checkbox">
+													<input type="checkbox" id="checkbox6">
+													<label for="checkbox6">Th</label>
+												</div>
+											</fieldset>
+										</li>
+										<li class="d-inline-block mr-1 mb-1">
+											<fieldset>
+												<div class="checkbox">
+													<input type="checkbox" id="checkbox7">
+													<label for="checkbox7">Fr</label>
+												</div>
+											</fieldset>
+										</li>
+										<li class="d-inline-block mr-2 mb-1">
+											<fieldset>
+												<div class="checkbox">
+													<input type="checkbox" id="checkbox8">
+													<label for="checkbox8">Sa</label>
+												</div>
+											</fieldset>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="form-row montluoccurs">
+								<div class="form-group col-md-12 mb-50">
+									<fieldset class="form-group">
+										<select class="form-control" id="occurs" name="occurs">
+											<option value="1">On the 6th</option>
+											<option value="2">On the first Thursday</option>
+										</select>
+									</fieldset>
+								</div>
+							</div>
+							<div class="dailyoccurs-cls">
+								<div class="border-cls"></div>
+								<h4>Ending</h4>
+								<div class="form-row">
+									<div class="form-group col-md-12 mb-50">
+										<label class="text-bold-600" for="exampleInputUsername1">End Date</label>
+										<fieldset class="form-group position-relative has-icon-left">
+											<input type="text" class="form-control eventenddate" placeholder="Select Date" id="eventenddate">
+											<div class="form-control-position">
+												<i class='bx bx-calendar'></i>
+											</div>
+										</fieldset>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-primary close-thnkyou " data-dismiss="modal">Save</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="modal fade assign-tq" id="rescheduleModel" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-dialog modal-dialog-centered" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Reschedule Event</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+						</button>
+					</div>
+					<div class="modal-body">
+						<div class="form-row">
+							<div class="form-group col-md-12 mb-50">
+								<label class="text-bold-600" for="exampleInputUsername1">Start Date</label>
+								<fieldset class="form-group position-relative has-icon-left">
+									<input type="text" class="form-control reeventstartdate" placeholder="Select Date" id="reeventstartdate">
+									<div class="form-control-position">
+										<i class='bx bx-calendar'></i>
+									</div>
+								</fieldset>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-group col-md-6 mb-50">
+								<label class="text-bold-600" for="exampleInputUsername1">Start Time</label>
+								<input type="text" class="form-control eventstarttime" placeholder="Select time" id="eventstarttime">
+							</div>
+							<div class="form-group col-md-6 mb-50">
+								<label class="text-bold-600" for="exampleInputUsername1">End Time</label>
+								<input type="text" class="form-control eventendtime" placeholder="Select time" id="eventendtime">
+							</div>
+						</div>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-primary close-thnkyou " data-dismiss="modal">OK</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	   <!-- BEGIN: Footer-->
+	<footer class="footer footer-static footer-light">
+		<p class="clearfix mb-0"><span class="float-left d-inline-block">2020 &copy; SCOUT</span><span class="float-right d-sm-inline-block d-none">Crafted with<i class="bx bxs-heart pink mx-50 font-small-3"></i>by<a class="text-uppercase" href="index.html" target="_blank">Scout</a></span>
+			<button class="btn btn-primary btn-icon scroll-top" type="button"><i class="bx bx-up-arrow-alt"></i></button>
+		</p>
+	</footer>
+	<!-- END: Footer-->
+
+	<script src="../app-assets/vendors/js/jquery.min.js"></script>
+	<!-- BEGIN: Vendor JS-->
+	<script src="../app-assets/vendors/js/vendors.min.js"></script>
+	<script src="../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+	<script src="../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+	<script src="../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+	<!-- BEGIN Vendor JS-->
+
+	<!-- BEGIN: Page Vendor JS-->
+	<script src="../app-assets/vendors/js/charts/apexcharts.min.js"></script>
+	<script src="../app-assets/vendors/js/extensions/dragula.min.js"></script>
+	<script src="../app-assets/vendors/js/pickers/pickadate/picker.js"></script>
+	<script src="../app-assets/vendors/js/pickers/pickadate/picker.date.js"></script>
+	<script src="../app-assets/vendors/js/pickers/pickadate/picker.time.js"></script>
+	<script src="../app-assets/vendors/js/pickers/pickadate/legacy.js"></script>
+	<script src="../app-assets/vendors/js/pickers/daterange/moment.min.js"></script>
+	<script src="../app-assets/vendors/js/pickers/daterange/daterangepicker.js"></script>
+	<!-- END: Page Vendor JS-->
+
+	<!-- BEGIN: Theme JS-->
+	<script src="../app-assets/js/core/app-menu.js"></script>
+	<script src="../app-assets/js/core/app.js"></script>
+	<script src="../app-assets/js/scripts/components.js"></script>
+	<script src="../app-assets/js/scripts/footer.js"></script>
+	<!-- END: Theme JS-->
+
+	<!-- BEGIN: Page JS-->
+	<script src="../assets/js/jquery-ui.js"></script>
+	<script src="../assets/js/jquery.timepicker.min.js"></script>
+	<script src="../assets/js/fullcalendar.min.js"></script>
+	  <script src="../app-assets/js/scripts/pickers/dateTime/pick-a-datetime.js"></script>
+	<script src="../app-assets/js/scripts/pages/dashboard-analytics.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('.health-decl-cls').hide();
+			$('input[name=customRadio]:radio').click(function() {
+				if($('input[name=customRadio]:checked').val() == "Yes"){
+					$(".health-decl-cls").show();
+				}else{
+					$(".health-decl-cls").hide();
+				}
+			});
+			$('.starttime').timepicker({
+				dropdown: true,
+				scrollbar: true,
+				 defaultTime: '09',
+			});
+			$('.endtime').timepicker({
+				dropdown: true,
+				scrollbar: true,
+				change: hideshow
+			});
+			$('.startdate').datepicker({
+				dateFormat: 'DD, d MM, yy',
+				minDate: 0,
+				onSelect: function(dateText, inst){
+					minDate: 0;
+				$('.enddate').datepicker('option', 'minDate', new Date(dateText));
+				},
+			});
+			$('.enddate').datepicker({
+				dateFormat: 'DD, d MM, yy',
+				onSelect: function(dateText, inst){
+					$('.startdate').datepicker('option', 'maxDate', new Date(dateText));
+				}
+			});
+			$(".add-evens-cls").hide();
+			$('input[name=eventselect]:radio').click(function() {
+				if($('input[name=eventselect]:checked').val() == "recurringevent"){
+					$('#calendar').fullCalendar({
+						height: 600,
+						// eventAfterAllRender: function(view) {
+						//    $('.fc-day').each(function(){
+						// 		$(this).append('<button>Day</button>');
+						//    });      
+						// },
+						
+						dayClick: function(date, jsEvent, view) {
+							$('#eventmodel').modal('show');
+						},
+						events: [
+							{
+								title  : '07:00-09:00',
+								start  : '2020-08-06',
+								description: 'long description',
+								color:"#2c6de9",
+								textColor:"#fff",
+							},
+						],
+						
+						eventClick: function(data, event, view) {
+							$("#rescheduleModel").modal('show');
+						},
+					});
+					$('#calendar').show();
+					$(".dateselect").hide();
+					$(".add-evens-cls").show();
+					$(".event-hours-cls").hide();
+				}else{
+					$(".add-evens-cls").hide();
+					$('#calendar').hide();
+					$(".dateselect").show();
+				}
+			});
+			$(document).on('click','.addevents',function(){
+				$('#eventmodel').modal('show');
+			});
+			reeventstartdate
+			$("#reeventstartdate").datepicker({
+				minDate: 0,
+			});
+			$("#eventstartdate").datepicker({
+				minDate: 0,
+				onSelect: function(dateText, inst){
+					minDate: 0;
+				$('.eventenddate').datepicker('option', 'minDate', new Date(dateText));
+				},
+			});
+			$("#eventenddate").datepicker({
+				onSelect: function(dateText, inst){
+					$('.eventstartdate').datepicker('option', 'maxDate', new Date(dateText));
+				}
+			});
+			
+			$('.eventstarttime').timepicker({
+				dropdown: true,
+				scrollbar: true,
+				defaultTime: '09',
+			});
+			$('.eventendtime').timepicker({
+				dropdown: true,
+				scrollbar: true,
+			});
+			$(".dailyoccurs-cls").hide();
+			$(".montluoccurs").hide();
+			$(".weeklyoccurs").hide();
+			$("select.occurs").change(function(){
+				var selectoccurs = $(this).children("option:selected").val();
+				if(selectoccurs == 'Once'){
+					$(".dailyoccurs-cls").hide();
+					$(".montluoccurs").hide();
+				}else if(selectoccurs == 'Daily'){
+					$(".montluoccurs").hide();
+					$(".dailyoccurs-cls").show();
+					$(".weeklyoccurs").hide();
+				}
+				else if(selectoccurs == 'Weekly'){
+					$(".weeklyoccurs").show();
+					$(".montluoccurs").hide();
+					$(".dailyoccurs-cls").show();
+				}
+				else {
+					$(".weeklyoccurs").hide();
+					$(".montluoccurs").show();
+					$(".dailyoccurs-cls").show();
+				}
+			});
+
+		});
+		$(".event-hours-cls").hide();
+		function hideshow (){
+			$(".event-hours-cls").show();
+		}
+	</script>
+</body>
+<!-- END: Body-->
+
+</html>

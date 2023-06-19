@@ -32,10 +32,10 @@ class CronJobController extends Controller {
             $Update = EventTokenManage::where('expire_date', '<=', date('Y-m-d'))->update(['status' => 'expired']);
             if($Update){
                 // Send email after successfull cronjob run
-                $sendMail = Mail::send(['html' => 'email.expired_token_cron_job_notification'], [], function ($message){
-                    $message->to(Config::get('mail.cron_job_send_email_address'),'Admin' ?? '');
-                    $message->subject('Events Token Expired Cron-Job Run Successfully');
-                });
+                // $sendMail = Mail::send(['html' => 'email.expired_token_cron_job_notification'], [], function ($message){
+                //     $message->to(Config::get('mail.cron_job_send_email_address'),'Admin' ?? '');
+                //     $message->subject('Events Token Expired Cron-Job Run Successfully');
+                // });
                 Log::info('Expired Event Token Cron-Job Run Successfully: '.date('Y-m-d h:i:s'));
                 echo 'Expired Event Token Cron-Job Run Successfully';exit;
             }else{

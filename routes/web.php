@@ -264,7 +264,7 @@ Route::group(['middleware' => 'login'], function () {
 
 	/*Audit Log Route START*/
 	Route::match(['GET', 'POST'], 'audit-log', 'AuditLogController@index')->name('audit-log');
-	Route::match(['GET', 'POST'], 'audit-log/show/{id}', 'AuditLogController@show');
+	Route::match(['GET', 'POST'], 'audit-log/show/{id}/{date}', 'AuditLogController@show');
 	Route::get('audit-log/delete/{id}', 'AuditLogController@audtilogDelete');
 	/*Audit Log Route END*/
 
@@ -332,4 +332,7 @@ Route::group(['middleware' => 'login'], function () {
 	Route::get('export/product-history','ExportController@productHistory');
 	Route::get('export/badge-assign-member','ExportController@badgeAssignMember');
 	Route::post('export/member-qrcodes-url', 'ExportController@exportMemberQrCodeUrls')->name('exportMemberQrCodeUrls');
+
+	//export AjAX function
+	Route::post('export-history', 'ExportController@exportHistory');
 });

@@ -61,6 +61,8 @@ return [
 	'Add Member' => 'Add Member',
 	'Event name' => 'Event Name',
 	'Member' => 'Member',
+	'Export' => 'Export',
+	'export_Product' => 'Product',
 	'Event' => 'Event',
 	'Not_Confirm' => 'Not Confirm',
 	'Confirm' => 'Confirm',
@@ -808,6 +810,7 @@ return [
 		'member_name' => 'Member Name',
 		'issue_date'  => 'Issue Date',
 		'reference_number' => 'Reference Number',
+		'user_name' => 'User Name',
 		'assigned_date' => 'Assigned Date',
 	],
 	'badge_member_list' => [
@@ -816,6 +819,7 @@ return [
 		'member_name' => 'Member Name',
 		'issue_date'  => 'Issue Date',
 		'reference_number' => 'Reference Number',
+		'user_name' => 'User Name',
 		'assigned_date' => 'Assigned Date',
 	],
 	'user_management' => [

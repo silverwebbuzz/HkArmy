@@ -24,7 +24,7 @@ class AssignAwards extends Model
     public $timestamps = true;
 
     public function user() {
-        return $this->hasOne(User::CLASS, 'ID','user_id')->select('ID','English_name','Chinese_name');
+        return $this->hasOne(User::CLASS, 'ID','user_id')->select('ID','UserName','English_name','Chinese_name');
     }
 
     public function award() {

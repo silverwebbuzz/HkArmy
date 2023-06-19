@@ -1,0 +1,3 @@
+ALTER TABLE `awards_assign` ADD `reference_number` VARCHAR(50) NULL DEFAULT NULL AFTER `award_id`, ADD `issue_date` DATE NULL DEFAULT NULL AFTER `reference_number`;
+
+ALTER TABLE `badge_assign` ADD `reference_number` VARCHAR(255) NULL DEFAULT NULL AFTER `badge_id`, ADD `issue_date` DATE NULL DEFAULT NULL AFTER `reference_number`;

@@ -1459,8 +1459,11 @@ class UserController extends Controller {
 			$query->where('rank_team', $filterrank);
 		}
 		$users = $query->with('elite')->with('subteam')->with('rank')->with('Qualification')->with('Remarks')->get()->toArray();
+		
 		if (!empty($users)) {
 			$rows = [];
+			
+			
 			foreach ($users as $key => $value) {
 				$related_activity = unserialize($value['Related_Activity_History']);
 				if (!empty($related_activity)) {
@@ -1486,7 +1489,21 @@ class UserController extends Controller {
 					} else {
 						$Relationship = 'Other relationship';
 					}
+
 				}
+				//Added By Vishnu Sir
+				//echo $value['ID']."<br/>";
+				//echo "email".$value['email']."<br/>";
+				
+				//echo "Uname".$value['UserName'];
+
+				$user_id = base64_encode($value['ID']);
+                			$email_add = base64_encode($value['email']);
+                			$QRString = $user_id . "/" . $email_add . "/" . trim($value['UserName']);
+
+				$member_qr_code=$QRString ?? '';
+				//End
+
 				$rows[$key]['2'] = ($value['MemberCode']) ? 'C' . $value['MemberCode'] : '';
 				$rows[$key]['3'] = isset($value['elite']['elite_' . app()->getLocale()]) ? $value['elite']['elite_' . app()->getLocale()] : '';
 				$rows[$key]['4'] = isset($value['subteam']['subteam_' . app()->getLocale()]) ? $value['subteam']['subteam_' . app()->getLocale()] : '';
@@ -1530,6 +1547,9 @@ class UserController extends Controller {
 				$rows[$key]['41'] = $value['hour_point'];
 				$rows[$key]['42'] = isset($value['member_token']) ? $value['member_token'] : '';
 				$rows[$key]['43'] = ($Specialty) ? implode(',', $Specialty_text) : '';
+				$rows[$key]['44'] = $member_qr_code;
+
+
 				/*$rows[$key]['29'] = ($remarks) ? $value['remarks']['remarks_'.app()->getLocale()] : '';*/
 			}
 
@@ -1575,12 +1595,14 @@ class UserController extends Controller {
 								'40' => __("languages.export_member.last_activity"),
 								'41' => __("languages.export_member.hour_point"),
 								'42' => __("languages.export_member.Tokens"),
-								'43' => __("languages.export_member.specialty")
+								'43' => __("languages.export_member.specialty"),
+								'44' => __("languages.export_member.Qr_code")
 							);
 			$exportColumn = explode(",", $request['export_filter']);
 			$i = 0;
 			$final_array = [];
 			$export_col_name = [];
+			//print_r($request['export_filter']);die;
 
 			foreach ($exportColumn as $exportColumnKey => $exportColumnValue) {
 				$export_col_name[] = $all_col_name[$exportColumnValue];
@@ -1603,6 +1625,8 @@ class UserController extends Controller {
 				"Expires" => "0",
 			);
 			$columns = $export_col_name;
+
+			
 			$callback = function () use ($final_array, $columns) {
 				$file = fopen('php://output', 'w');
 				fputcsv($file, $columns);
@@ -1654,6 +1678,8 @@ class UserController extends Controller {
 				$Query->Where(function($query) use($request){
 					$query->where('email','Like','%'.$request->search_text.'%')
 					->orWhere('UserName','Like','%'.$request->search_text.'%')
+					->orWhere('English_name','Like','%'.$request->search_text.'%')
+					->orWhere('Chinese_name','Like','%'.$request->search_text.'%')
 					->orWhere('Contact_number','Like','%'.$request->search_text.'%')
 					->orWhere('Contact_number_1','Like','%'.$request->search_text.'%')
 					->orWhere('Contact_number_2','Like','%'.$request->search_text.'%');
@@ -1760,7 +1786,11 @@ class UserController extends Controller {
 				}
 			}
 		}
+
+		$Query->where('Role_ID', '2');
+		
 		$userData = $Query->paginate($items);
+
         return view('NewMemberManagement.members_list',compact('userData','items','Ranks','Teams','subteams','RelatedActivityHistory','Specialty','Qualification'));  
     }
 }

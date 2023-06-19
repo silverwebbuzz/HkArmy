@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
+    <meta name="description" content="Frest admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Frest admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>User Profile - Scout - Bootstrap HTML admin template</title>
+    <link rel="apple-touch-icon" href="../app-assets/images/ico/S_blue.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,600%7CIBM+Plex+Sans:300,400,500,600,700" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/vendors/css/extensions/swiper.min.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/themes/semi-dark-layout.css">
+    <!-- END: Theme CSS-->
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="../app-assets/css/pages/page-user-profile.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern boxicon-layout no-card-shadow 2-columns  navbar-sticky footer-static menu-collapsed " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+
+    <!-- BEGIN: Header-->
+    <div class="header-navbar-shadow"></div>
+<nav class="header-navbar main-header-navbar navbar-expand-lg navbar navbar-with-menu fixed-top ">
+        <div class="navbar-wrapper">
+            <div class="navbar-container content">
+                <div class="navbar-collapse" id="navbar-mobile">
+                    <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon bx bx-menu"></i></a></li>
+                        </ul>
+                    </div>
+                    <ul class="nav navbar-nav float-right">
+                        <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="selected-language">中文 </span></a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="../html/ch/page-user-profile.html" data-language="en">中文 </a><a class="dropdown-item" href="../html/en/page-user-profile.html" data-language="fr">English</a></div>
+                        </li>
+                        <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                <div class="user-nav d-sm-flex d-none"><span class="user-name">John Doe</span><span class="user-status text-muted">在線</span></div><span><img class="round" src="../app-assets/images/portrait/small/avatar-s-11.jpg" alt="avatar" height="40" width="40"></span>
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right pb-0">
+                                <a class="dropdown-item" href="page-user-profile.html"><i class="bx bx-user mr-50"></i> 編輯個人資料</a>
+                                <a class="dropdown-item" href="auth-login.html"><i class="bx bx-power-off mr-50"></i> 登出</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- END: Header-->
+
+
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item mr-auto"><a class="navbar-brand" href="../html/ch/index.html">
+                         <div class="brand-logo"><img class="logo" src="../app-assets/images/logo/S_blue.png" /></div>
+                        <h2 class="brand-text mb-0">香港青少年軍</h2>
+                    </a></li>
+                <!-- <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="bx bx-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon bx bx-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="bx-disc"></i></a></li> -->
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+       <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation" data-icon-style="">
+                <li class="nav-item"><a href="index.html"><i class="bx bx-home-alt"></i><span class="menu-title" data-i18n="Dashboard">儀表盤</span></a>
+                </li>
+                <li class="active nav-item"><a href="page-users-list.html"><i class="bx bx-user-plus"></i><span class="menu-title" data-i18n="User">團員</span></a>
+                </li>
+                <!--<li class=" nav-item"><a href="activity-management.html"><i class="bx bx-run"></i><span class="menu-title" data-i18n="Dashboard">活動管理</span></a>-->
+                <!--</li>-->
+                <li class="nav-item"><a href="event-management.html"><i class="bx bx-calendar-event"></i><span class="menu-title" data-i18n="Dashboard">活動管理</span></a>
+                    </li>
+                </li>
+                <li class=" nav-item"><a href="attendance.html"><i class="bx bxs-book-open"></i><span class="menu-title" data-i18n="Dashboard">考勤管理</span></a>
+                </li>
+                <li class=" nav-item"><a href="role-management.html"><i class="bx bx-user"></i></i><span class="menu-title" data-i18n="Dashboard">職能權限管理</span></a>
+                </li>
+                <li class="nav-item"><a href="#"><i class="bx bxs-user-detail"></i><span class="menu-title" data-i18n="User">制服換領/購買紀錄</span></a>
+                    <ul class="menu-content">
+                        <li><a href="product-list.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="List">產品</span></a>
+                        </li>
+                        <li><a href="purchase-product-list.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">添加產品購買</span></a>
+                        </li>
+                        <li><a href="product-list-card.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">Product List</span></a>
+                        </li>
+                        <li><a href="cart.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">Cart</span></a>
+                        </li>
+                        <li><a href="checkout.html"><i class="bx bx-right-arrow-alt"></i><span class="menu-item" data-i18n="View">Checkout</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item"><a href="#"><i class="bx bxs-user-detail"></i><span class="menu-title" data-i18n="User">設置</span></a>
+                    <ul class="menu-content">
+                         <li class=" nav-item"><a href="team.html"><i class="bx bx-group"></i><span class="menu-title" data-i18n="Dashboard">縱隊</span></a>
+                        </li>
+                        <li class=" nav-item"><a href="rank.html"><i class="bx bx-group"></i><span class="menu-title" data-i18n="Dashboard">軍銜</span></a>
+                        </li>
+                        <li class=" nav-item"><a href="hour.html"><i class="bx bx-group"></i><span class="menu-title" data-i18n="Dashboard">時數</span></a>
+                        </li>
+                        <li class="nav-item"><a href="awards-badge.html"><i class="bx bx-trophy"></i><span class="menu-title" data-i18n="Dashboard">獎項</span></a></li>
+                        <li class="nav-item"><a href="badge.html"><i class="bx bx-trophy"></i><span class="menu-title" data-i18n="Dashboard">獎章</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+
+
+    <!-- BEGIN: Content-->
+     <div class="app-content content">
+        <div class="content-overlay"></div>
+        <div class="content-wrapper">
+            <div class="content-header row">
+            </div>
+            <div class="content-body">
+                
+                <!-- page user profile start -->
+                <section class="page-user-profile">
+                    <div class="row">
+                        <div class="col-12">
+                            <!-- user profile heading section start -->
+                            <div class="card">
+                                <div class="card-content">
+                                    <div class="user-profile-images">
+                                        <!-- user timeline image -->
+                                        <img src="../app-assets/images/profile/post-media/profile-banner.jpg" class="img-fluid rounded-top user-timeline-image" alt="user timeline image">
+                                        <!-- user profile image -->
+                                        <img src="../app-assets/images/portrait/small/avatar-s-16.jpg" class="user-profile-image rounded" alt="user profile image" height="140" width="140">
+                                    </div>
+                                    <div class="user-profile-text">
+                                        <h4 class="mb-0 text-bold-500 profile-text-color">Martina Ash</h4>
+                                        <small>Member Code: 300</small>
+                                    </div>
+                                    <!-- user profile nav tabs start -->
+                                    <div class="card-body px-0">
+                                        <ul class="nav user-profile-nav justify-content-center justify-content-md-start nav-tabs border-bottom-0 mb-0" role="tablist">
+                                            <li class="nav-item pb-0">
+                                                <a class="nav-link d-flex px-1 active" id="activity-tab" data-toggle="tab" href="#activity" aria-controls="activity" role="tab" aria-selected="True"><i class="bx bx-user"></i><span class="d-none d-md-block">Activity</span></a>
+                                            </li>
+                                            <li class="nav-item pb-0 mr-0">
+                                                <a class="nav-link d-flex px-1" id="profile-tab" data-toggle="tab" href="#profile" aria-controls="profile" role="tab" aria-selected="false"><i class="bx bx-copy-alt"></i><span class="d-none d-md-block">Profile</span></a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <!-- user profile nav tabs ends -->
+                                </div>
+                            </div>
+                            <!-- user profile heading section ends -->
+
+                            <!-- user profile content section start -->
+                            <div class="row">
+                                <!-- user profile nav tabs content start -->
+                                <div class="col-lg-12">
+                                    <div class="tab-content">
+
+                                        <div class="tab-pane active" id="activity" aria-labelledby="activity-tab" role="tabpanel">
+                                            <!-- user profile nav tabs activity start -->
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <div class="row bg-primary bg-lighten-5 rounded mb-2 mx-25 text-center text-lg-left">
+                                                            <div class="col-12 p-2">
+                                                                <h6 class="text-primary mb-0">Number of Attendance: <span class="font-large-1 align-middle">10</span></h6>
+                                                            </div>
+                                                        </div>
+                                                        <form>
+                                                            <div class="row py-1 mb-1">
+                                                                <div class="col-12 col-sm-6 col-lg-3">
+                                                                    <label for="users-list-status">Select activity</label>
+                                                                    <fieldset class="form-group">
+                                                                        <select class="form-control" id="users-list-status">
+                                                                             <option value="">Any</option>
+                                                                            <option value="">General</option>
+                                                                            <option value="User">Service</option>
+                                                                            <option value="User">Transaction</option>
+                                                                            <option value="User">Training</option>
+                                                                            <option value="User">Others</option>
+                                                                        </select>
+                                                                    </fieldset>
+                                                                </div>
+                                                            </div>
+                                                        </form> 
+                                                        <!-- timeline widget start -->
+                                                        <ul class="widget-timeline">
+                                                            <li class="timeline-items timeline-icon-success active">
+                                                                <div class="timeline-time">Tue 8:17pm</div>
+                                                                <h6 class="timeline-title">Martina Ash</h6>
+                                                                <p class="timeline-text">on <a href="JavaScript:void(0);">Received Gift</a></p>
+                                                                <div class="timeline-content">
+                                                                    Welcome to vedio game and lame is very creative
+                                                                </div>
+                                                            </li>
+                                                            <li class="timeline-items timeline-icon-primary active">
+                                                                <div class="timeline-time">5 days ago</div>
+                                                                <h6 class="timeline-title">Jonny Richie attached file</h6>
+                                                                <p class="timeline-text">on <a href="JavaScript:void(0);">Project name</a></p>
+                                                                <div class="timeline-content">
+                                                                    <img src="../app-assets/images/icon/sketch.png" alt="document" height="36" width="27" class="mr-50">Data Folder
+                                                                </div>
+                                                            </li>
+                                                            <li class="timeline-items timeline-icon-danger active">
+                                                                <div class="timeline-time">7 hours ago</div>
+                                                                <h6 class="timeline-title">Mathew Slick docs</h6>
+                                                                <p class="timeline-text">on <a href="JavaScript:void(0);">Project name</a></p>
+                                                                <div class="timeline-content">
+                                                                    <img src="../app-assets/images/icon/pdf.png" alt="document" height="36" width="27" class="mr-50">Received Pdf
+                                                                </div>
+                                                            </li>
+                                                            <li class="timeline-items timeline-icon-info active">
+                                                                <div class="timeline-time">5 hour ago</div>
+                                                                <h6 class="timeline-title">Petey Cruiser send you a message</h6>
+                                                                <p class="timeline-text">on <a href="JavaScript:void(0);">Redited message</a></p>
+                                                                <div class="timeline-content">
+                                                                    Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it
+                                                                    is
+                                                                    pain, but because occasionally circumstances
+                                                                </div>
+                                                            </li>
+                                                            <li class="timeline-items timeline-icon-warning">
+                                                                <div class="timeline-time">2 min ago</div>
+                                                                <h6 class="timeline-title">Anna mull liked </h6>
+                                                                <p class="timeline-text">on <a href="JavaScript:void(0);">Liked</a></p>
+                                                                <div class="timeline-content">
+                                                                    The Amairates
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                        <!-- timeline widget ends -->
+                                                        <div class="text-center">
+                                                            <button class="btn btn-primary">View All Activity</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- user profile nav tabs activity start -->
+                                        </div>
+                                        <div class="tab-pane" id="profile" aria-labelledby="profile-tab" role="tabpanel">
+
+                                            <!-- user profile nav tabs profile start -->
+                                            
+                                            <div class="card">
+                                                <div class="card-content">
+                                                    <div class="card-body">
+                                                        <div class="row">
+                                                            
+                                                            <div class="col-6">
+                                                                <h5 class="card-title mb-1"><i class="bx bx-info-circle"></i> Personal Info</h5>
+                                                                <table class="table table-borderless">
+                                                                    <tbody>
+                                                                        <tr>
+                                                                            <td>Member Name:</td>
+                                                                            <td class="users-view-username">Dean Stanley</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Member Code:</td>
+                                                                            <td class="users-view-name">300</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Activity Name</td>
+                                                                            <td class="users-view-verified">Service</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Role:</td>
+                                                                            <td class="users-view-role">Member</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>E-mail:</td>
+                                                                            <td class="users-view-email">deanstanley@gmail.com</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Birthday:</td>
+                                                                            <td>03/04/1990</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Country:</td>
+                                                                            <td>USA</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Languages:</td>
+                                                                            <td>English</td>
+                                                                        </tr>
+                                                                        <tr>
+                                                                            <td>Contact:</td>
+                                                                            <td>+(305) 254 24668</td>
+                                                                        </tr>
+                                                                    </tbody>
+                                                                </table>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <h5 class="card-title">Basic details</h5>
+                                                                <ul class="list-unstyled">
+                                                                    <li><i class="cursor-pointer bx bx-map mb-1 mr-50"></i>California</li>
+                                                                    <li><i class="cursor-pointer bx bx-phone-call mb-1 mr-50"></i>(+56) 454 45654 </li>
+                                                                    <li><i class="cursor-pointer bx bx-time mb-1 mr-50"></i>July 10</li>
+                                                                    <li><i class="cursor-pointer bx bx-envelope mb-1 mr-50"></i>Jonnybravo@gmail.com</li>
+                                                                </ul>
+                                                            </div>
+                                                        </div>
+                                                        
+                                                        <div class="row">
+                                                            <div class="col-12">
+                                                                <h6><small class="text-muted">Bio</small></h6>
+                                                                <p>Built-in customizer enables users to change their admin panel look & feel based on their
+                                                                    preferences Beautifully crafted, clean & modern designed admin theme with 3 different demos &
+                                                                    light - dark versions.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- user profile nav tabs profile ends -->
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- user profile nav tabs content ends -->
+                               
+                            </div>
+                            <!-- user profile content section start -->
+                        </div>
+                    </div>
+                </section>
+                <!-- page user profile ends -->
+
+            </div>
+        </div>
+    </div>
+    <!-- END: Content-->
+
+    </div>
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- BEGIN: Footer-->
+    <footer class="footer footer-static footer-light">
+        <p class="clearfix mb-0"><span class="float-left d-inline-block">2020 &copy; SCOUT</span><span class="float-right d-sm-inline-block d-none">Crafted with<i class="bx bxs-heart pink mx-50 font-small-3"></i>by<a class="text-uppercase" href="index.html" target="_blank">Scout</a></span>
+            <button class="btn btn-primary btn-icon scroll-top" type="button"><i class="bx bx-up-arrow-alt"></i></button>
+        </p>
+    </footer>
+    <!-- END: Footer-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="../app-assets/vendors/js/vendors.min.js"></script>
+    <script src="../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.tools.js"></script>
+    <script src="../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.defaults.js"></script>
+    <script src="../app-assets/fonts/LivIconsEvo/js/LivIconsEvo.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <script src="../app-assets/vendors/js/extensions/swiper.min.js"></script>
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="../app-assets/js/core/app-menu.js"></script>
+    <script src="../app-assets/js/core/app.js"></script>
+    <script src="../app-assets/js/scripts/components.js"></script>
+    <script src="../app-assets/js/scripts/footer.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="../app-assets/js/scripts/pages/page-user-profile.js"></script>
+    <!-- END: Page JS-->
+
+</body>
+<!-- END: Body-->
+
+</html>

@@ -1,0 +1,340 @@
+/*================================================================================
+	Item Name: Frest HTML Admin Template
+	Version: 1.0
+	Author: PIXINVENT
+	Author URL: http://www.themeforest.net/user/pixinvent
+================================================================================
+
+NOTE:
+------
+PLACE HERE YOUR OWN SCSS CODES AND IF NEEDED, OVERRIDE THE STYLES FROM THE OTHER STYLESHEETS.
+WE WILL RELEASE FUTURE UPDATES SO IN ORDER TO NOT OVERWRITE YOUR STYLES IT'S BETTER LIKE THIS.  */
+
+.scop-sign-up .disable-rounded-right .card-header {
+	padding-bottom: 0px !important;
+}
+.scop-sign-up .disable-rounded-right .card-body{
+	padding-bottom: 0px !important;
+}
+.scop-sign-up .disable-rounded-right .card-body form .glow {
+	margin-top: 10px;
+}
+.table th, .table td {
+    padding: 1.15rem 0.8rem;
+    vertical-align: top;
+    border-top: 1px solid #DFE3E7;
+}
+.table td a {
+    padding-left: 3px;
+}
+.new-user button.submit{
+	margin-top: 20px;
+}
+html body .content .content-wrapper .content-header-title {
+    color: #475F7B;
+    margin-right: 1rem;
+    border-right: 0px;
+}
+body.vertical-layout.vertical-menu-modern .main-menu .navigation > li > a > i,.vertical-overlay-menu .main-menu .navigation > li > a > i{
+	margin-right: 8px;
+}
+.page-user-profile #profile td{
+	padding: 5px 0px;
+}
+.add-rank-sec .card-body input,.add-rank-sec select{
+	width: 50%;
+}
+.product-card .card{
+	height: auto !important;
+}
+.product-card .card .card-body .card-text{
+	margin-bottom: 0.5rem;
+}
+.add-hour-sec .card-body .status select{
+	width: 49.5%;
+}
+.add-hour-sec .card-body .status{
+	padding: 0px;
+}
+.awards-badge-sec .card-body a{
+	color: #475F7B;
+}
+.left-cart-sec form {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+  display: flex;
+}
+
+.left-cart-sec .value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 8px 0;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.left-cart-sec.value-button:hover {
+  cursor: pointer;
+}
+
+.left-cart-sec form #decrease {
+  margin-right: -4px;
+  border-radius: 8px 0 0 8px;
+}
+
+.left-cart-sec form #increase {
+  margin-left: -4px;
+  border-radius: 0 8px 8px 0;
+}
+
+.left-cart-sec form #input-wrap {
+  margin: 0px;
+  padding: 0px;
+}
+
+.left-cart-sec input#number {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 40px;
+}
+
+.left-cart-sec input[type=number]::-webkit-inner-spin-button,
+.left-cart-sec input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+.right-cart-sec{
+	padding: 20px;
+}
+.left-cart-sec {
+	display: flex;
+}
+.page-user-profile .Subtotal {
+	font-size: 20px;
+}
+.left-cart-sec .left-detail .p1{
+	font-size: 25px;
+    color: #475f7b;
+    margin-top: 10px;
+}
+.right-cart-sec .btn{
+	width: 100%;
+}
+.right-cart-sec h4{
+	font-size: 18px;
+}
+.shapping-address-sec #ship-to-different-address{
+	padding-left: 20px;
+}
+.payment-methode .card{
+	padding: 20px;
+}
+.payment-methode .payment_methods.payment_methods{
+	list-style: none;
+}
+.payment-methode .payment_methods.payment_methods a{
+	color: #475F7B;
+	padding-left: 10px;
+}
+.payment-methode .payment_methods.payment_methods img{
+	width: 100%;
+}
+.left-cart-main .back-submit{
+	display: inline-block;
+    width: 100%;
+}
+.left-cart-main .back-submit .card-btn {
+    text-align: left !important;
+    float: left;
+}
+.left-cart-main .back-submit .Subtotal {
+	float: right;
+}
+
+
+
+/* responsive css start */
+
+@media (max-width: 767px){
+	.add-rank-sec .card-body input,.add-rank-sec select{
+		width: 100%;
+	}
+	.add-hour-sec .card-body .status select{
+		width: 100%;
+	}
+	.left-cart-sec {
+      display: block; 
+      text-align: center;
+	}
+	.page-user-profile .Subtotal {
+    font-size: 20px;
+    text-align: center !important;
+}
+	.left-cart-sec form {
+	    width: 100%;
+	    margin: 0 auto;
+	    text-align: center;
+	    padding-top: 50px;
+	   	display: block;
+	}
+	.payment-methode .payment_methods.payment_methods {
+	    list-style: none;
+	    padding: 0;
+	}
+}
+
+.required-cls{
+	color:red;
+}
+.multiselect {
+  width: 200px;
+}
+
+.selectBox {
+  position: relative;
+}
+
+.selectBox select {
+  width: 100%;
+}
+
+.overSelect {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+#checkboxes {
+  display: none;
+  border: 1px #dadada solid;
+}
+
+#checkboxes label {
+  display: block;
+}
+
+#checkboxes label:hover {
+  background-color: #1e90ff;
+}
+.button-group .btn-sm{
+    font-size: 16px;
+}
+.button-group ul .small{
+  font-size: 16px;
+}
+.button-group .show li{
+  padding: 0 10px;
+}
+.multiselect-container {
+  width: 400px;
+}
+.multiselect-container li{
+  display: flex;
+}
+.multiselect-container li label{
+  display: inline-block !important;
+}
+.multiselect-container li label input{
+  display: inline-block !important;
+}
+.multiselect-container>li>a>label {
+    margin: 0;
+    height: 100%;
+    cursor: pointer;
+    font-weight: 400;
+    padding: 7px 17px 3px 20px !important;
+    width: 200px;
+}
+.effective-date-cls .picker {
+  top: 50% !important; 
+}
+.assign-modal .modal-dialog .multiselect-container {
+    width: 300px;
+    will-change: unset !important;
+    top: 41px !important;
+    left: 0px;
+    transform: none !important;
+}
+.assign-modal .modal-body {
+    overflow-y: auto;
+    height: 150px;
+}
+.assign-tq .modal-body {
+  overflow-y: auto;
+    height: auto;
+}
+.assign-modal .btn-group:not(.dropdown) > .btn:not(:last-child) {
+    border-right-width: 1px;
+}
+.assign-modal .modal-footer {
+    align-items: start;
+    justify-content: flex-start;
+}
+.ui-timepicker-standard{
+    z-index: 99999 !important;
+}
+.border-cls{
+  border-top: 1px solid #DFE3E7;
+  margin: 0px 0px 10px 0px;
+}
+.addevents{
+  float: right;
+}
+.fc-unthemed td.fc-today {
+    background: #FFF !important;
+    border-top: 1px solid #ddd !important;
+    font-weight: bold;
+    cursor: pointer;
+}
+/*.fc-content {
+    cursor: pointer;
+}*/
+.fc-event{
+    cursor: pointer;
+}
+@media (max-width: 580px){
+  .multiselect-container>li>a>label {
+    width: 175px;
+  }
+  .multiselect-container {
+      width: 285px;
+  }
+  .multiselect-container>li>a>label {
+      padding: 7px 10px 3px 3px !important;
+  }
+  .multiselect-container li .custom-input{
+    width: 100px;
+  }
+}
+@media (max-width: 375px){
+  .multiselect-container {
+    width: 230px;
+  }
+  .multiselect-container li label{
+    font-size: 10px;
+  }
+  .multiselect-container li .custom-input{
+    width: 80px;
+  }
+  .multiselect-container>li>a>label {
+    width: 145px;
+  }
+}

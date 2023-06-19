@@ -559,6 +559,7 @@ function exportAssignUserReport(){
 					var url = URL.createObjectURL(blobObject);
 					downloadLink.href = url;
 					downloadLink.download = "EnrollmentProduct.csv";
+					exportHistroy('EnrollmentProduct', url, fileData);
 
 					document.body.appendChild(downloadLink);
 					downloadLink.click();

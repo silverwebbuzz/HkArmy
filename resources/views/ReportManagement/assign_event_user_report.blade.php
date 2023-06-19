@@ -341,6 +341,7 @@
 						var url = URL.createObjectURL(blobObject);
 						downloadLink.href = url;
 						downloadLink.download = "AssignUserReport.csv";
+						exportHistroy('AssignUserReport', url, fileData);
 	
 						document.body.appendChild(downloadLink);
 						downloadLink.click();

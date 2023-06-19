@@ -18,6 +18,7 @@ use App\Http\Models\AssignProductOrder;
 use App\Http\Models\SizeAttributes;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\View;
+use App\Helpers\Helper;
 
 
 class ProductController extends Controller {
@@ -803,7 +804,7 @@ class ProductController extends Controller {
 		$assignExisting = false;
 		if (!empty($users)) {
 			$currentDate = date('Y-m-d');
-			$AssignProductOrder = AssignProductOrder::create([
+			$postData = [
 				'order_id' => $this->GenerateOrderId(),
 				'product_id' => $request->productid,
 				'product_cost_type_id' => $request->costTypeId,
@@ -811,7 +812,11 @@ class ProductController extends Controller {
 				'order_date' => $currentDate,
 				'created_by_user_id' => Session::get('user')['user_id'],
 				'status' => 1
-			]);
+			];
+			$assignBy =  Session::get('user')['username'];
+			$product = ProductModel::find($request->productid)->product_name;
+			$AssignProductOrder = AssignProductOrder::create($postData);
+			$AssignProductOrderId = $AssignProductOrder->id;
 			
 			foreach ($users as $key => $user_id) {
 				if($request->costTypeId){
@@ -820,6 +825,7 @@ class ProductController extends Controller {
 					if ($costTypeData->cost_type == 1) {
 						// $Products = ProductAssignModel::where('user_id', $user_id)->where('product_id', $request->productid)->first();
 						// if (empty($Products)) {
+							$userId = $user_id; 
 							$assign = new ProductAssignModel;
 							$assign->assign_product_order_id = $AssignProductOrder->id;
 							$assign->product_id = !empty($request->productid) ? $request->productid : NULL;
@@ -829,7 +835,8 @@ class ProductController extends Controller {
 							$assign->cost_type_id = $costTypeData->id ?? null;
 							$assign->money = !empty($costTypeData->cost_value) ? $costTypeData->cost_value : NULL;
 							$assign->save();
-
+							$id = $assign->id;
+					
 							// if($assign->save()){
 							// 	$remaningMoney = $userMoney->total_money - $costType->cost_value;
 							// 	User::where('ID' , '=' , $user_id)->update(['total_money' => $remaningMoney]);
@@ -841,6 +848,7 @@ class ProductController extends Controller {
 						if ($userMoney->member_token != "" && $userMoney->member_token != 0 && $costTypeData->cost_value <= $userMoney->member_token) {
 							// $Products = ProductAssignModel::where('user_id', $user_id)->where('product_id', $request->productid)->first();
 							// if (empty($Products)) {
+								$userId = $user_id;
 								$assign = new ProductAssignModel;
 								$assign->assign_product_order_id = $AssignProductOrder->id;
 								$assign->product_id = !empty($request->productid) ? $request->productid : NULL;
@@ -850,6 +858,7 @@ class ProductController extends Controller {
 								$assign->cost_type_id = $costTypeData->id ?? null;
 								$assign->token = !empty($costTypeData->cost_value) ? $costTypeData->cost_value : NULL;
 								$assign->save();
+								$id = $assign->id;
 								// if ($assign->save()) {
 								// 	$remaningToken = $userMoney->member_token - $costTypeData->cost_value;
 								// 	User::where('ID', '=', $user_id)->update(['member_token' => $remaningToken]);
@@ -865,6 +874,7 @@ class ProductController extends Controller {
 						if ($userMoney->member_token != "" && $userMoney->member_token != 0 && $moneyTokenvalue[1] <= $userMoney->member_token) {
 							// $Products = ProductAssignModel::where('user_id', $user_id)->where('product_id', $request->productid)->first();
 							// if (empty($Products)) {
+								$userId = $user_id;
 								$assign = new ProductAssignModel;
 								$assign->assign_product_order_id = $AssignProductOrder->id;
 								$assign->product_id = !empty($request->productid) ? $request->productid : NULL;
@@ -875,6 +885,7 @@ class ProductController extends Controller {
 								$assign->money = !empty($moneyTokenvalue[0]) ? $moneyTokenvalue[0] : NULL;
 								$assign->token = !empty($moneyTokenvalue[1]) ? $moneyTokenvalue[1] : NULL;
 								$assign->save();
+								$id = $assign->id;
 
 								// if ($assign->save()) {
 								// 	$remaningMoney = $userMoney->total_money - $moneyTokenvalue[0];
@@ -891,17 +902,24 @@ class ProductController extends Controller {
 				} else {
 					// $Products = ProductAssignModel::where('user_id', $user_id)->where('product_id', $request->productid)->first();
 					// if (empty($Products)) {
+						$userId = $user_id;
 						$assign = new ProductAssignModel;
 						$assign->assign_product_order_id = $AssignProductOrder->id;
 						$assign->product_id = !empty($request->productid) ? $request->productid : NULL;
 						$assign->child_product_id = !empty($request->childProductId) ? implode(',',$request->childProductId) : NULL;
 						$assign->user_id = !empty($user_id) ? $user_id : NULL;
 						$assign->save();
+						$id = $assign->id();
 						$assignExisting = true;
 					//}
 				}
 			}
 		}
+		
+		$assignTo = User::find($user_id)->English_name;
+		$getData =  ['product' => $product, 'assign_product_order_id' => $AssignProductOrderId, 'assign_to_user' => $assignTo, 'assign_by_user' => $assignBy];
+		Helper::InsertAuditLogfuncation($getData, $id, 'ProductAssign', 'Product');
+		
 		if ($assignExisting) {
 			return response()->json(['status' => true, 'message' => "Assign Product successfully."]);
 		} else {

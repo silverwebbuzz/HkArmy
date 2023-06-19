@@ -261,6 +261,7 @@ function exportRoles(){
 					var url = URL.createObjectURL(blobObject);
 					downloadLink.href = url;
 					downloadLink.download = "Roles.csv";
+					exportHistroy('Roles', url, fileData);
 
 					document.body.appendChild(downloadLink);
 					downloadLink.click();

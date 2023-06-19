@@ -61,6 +61,8 @@ return [
 	'Add Member' => '新增會員',
 	'Event name' => '活動名稱',
 	'Member' => '會員',
+	'Export' => '出口',
+	'export_Product' => '產品',
 	'Event' => '活動',
 	'Not_Confirm' => '未確認',
 	'Confirm' => '確認',
@@ -808,6 +810,7 @@ return [
 		'member_name' => '成員名字',
 		'issue_date'  => '發行日期',
 		'reference_number' => '參考編號',
+		'user_name' => '用戶名',
 		'assigned_date' => '指定日期',
 	],
 	'badge_member_list' => [
@@ -816,6 +819,7 @@ return [
 		'member_name' => '成員名字',
 		'issue_date'  => '發行日期',
 		'reference_number' => '參考編號',
+		'user_name' => '用戶名',
 		'assigned_date' => '指定日期',
 	],
 	'user_management' => [

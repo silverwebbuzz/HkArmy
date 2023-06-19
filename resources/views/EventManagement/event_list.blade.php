@@ -482,6 +482,7 @@ function exportEvents(){
 					var url = URL.createObjectURL(blobObject);
 					downloadLink.href = url;
 					downloadLink.download = "Events.csv";
+					exportHistroy('Events', url, fileData);
 
 					document.body.appendChild(downloadLink);
 					downloadLink.click();

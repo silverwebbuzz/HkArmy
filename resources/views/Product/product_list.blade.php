@@ -323,6 +323,7 @@ function exportProduct(){
 					var url = URL.createObjectURL(blobObject);
 					downloadLink.href = url;
 					downloadLink.download = "Products.csv";
+					exportHistroy('Products', url, fileData);
 
 					document.body.appendChild(downloadLink);
 					downloadLink.click();

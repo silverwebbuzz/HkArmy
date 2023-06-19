@@ -366,6 +366,7 @@ function exportAttendanceEventMember(){
 					var url = URL.createObjectURL(blobObject);
 					downloadLink.href = url;
 					downloadLink.download = "AttendaceEventMember.csv";
+					exportHistroy('AttendaceEventMember', url, fileData);
 
 					document.body.appendChild(downloadLink);
 					downloadLink.click();

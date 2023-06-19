@@ -114,7 +114,7 @@ class LoginController extends Controller
 		$email = base64_decode($request->email);
 		$user = User::where('ID',$userid)->where("Email",$email)->get()->toArray();
 		if($user){
-			Session::put('user', ['role_id' => $user[0]['Role_ID'], 'user_id' => $user[0]['ID'], 'email' => $user[0]['email'],'username' => $user[0]['UserName']]);
+			Session::put('user', ['role_id' => $user[0]['Role_ID'], 'user_id' => $user[0]['ID'], 'email' => $user[0]['email'],'username' => $user[0]['UserName'], 'Chinese_name' => $user[0]['Chinese_name'], 'English_name' => $user[0]['English_name']]);
 				$redirect = '/';
 				return response()->json(array('status' => 1,'message'=>'Login Successfully','redirecturl' => $redirect));
 		}else{

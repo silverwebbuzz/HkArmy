@@ -1,0 +1,118 @@
+#reader #reader__dashboard_section_csr button{
+	border-color: #2c6de9 !important;
+	background-color: #5A8DEE !important;
+	color: #fff !important;
+	outline: none;
+	border: none;
+	padding: 0.467rem 1.5rem;
+	font-size: 1rem;
+	line-height: 1.6rem;
+	border-radius: 0.267rem;
+	text-align: center;
+	vertical-align: middle;	
+	margin-bottom: 15px;
+}
+#reader span{
+	font-size: 18px;
+    line-height: 28px;
+    color: #475F7B;
+    font-weight: 500;
+}
+#reader #reader__dashboard_section a{
+	border-color: #2c6de9 !important;
+	background-color: #5A8DEE !important;
+	color: #fff !important;
+	outline: none;
+	border: none;
+	/*padding: 0.467rem 1.5rem;*/
+	font-size: 1rem;
+	line-height: 1.6rem;
+	border-radius: 0.267rem;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none !important;
+}
+#reader__status_span{
+	display: none;
+}
+#reader{
+	text-align: center;
+}
+.loginwith-cls{
+	text-align: center;
+	margin-bottom: 15px;
+}
+#reader #reader__dashboard_section_fsr span{
+	display: none;
+}
+#reader #reader__dashboard_section_fsr input{
+	margin-bottom: 20px;
+}
+
+#qrlogout #qrlogout__dashboard_section_csr button{
+	border-color: #2c6de9 !important;
+	background-color: #5A8DEE !important;
+	color: #fff !important;
+	outline: none;
+	border: none;
+	padding: 0.467rem 1.5rem;
+	font-size: 1rem;
+	line-height: 1.6rem;
+	border-radius: 0.267rem;
+	text-align: center;
+	vertical-align: middle;	
+	margin-bottom: 15px;
+}
+#qrlogout span{
+	font-size: 18px;
+    line-height: 28px;
+    color: #475F7B;
+    font-weight: 500;
+}
+#qrlogout #qrlogout__dashboard_section a{
+	border-color: #2c6de9 !important;
+	background-color: #5A8DEE !important;
+	color: #fff !important;
+	outline: none;
+	border: none;
+	/*padding: 0.467rem 1.5rem;*/
+	font-size: 1rem;
+	line-height: 1.6rem;
+	border-radius: 0.267rem;
+	text-align: center;
+	vertical-align: middle;
+	text-decoration: none !important;
+}
+#qrlogout__status_span{
+	display: none;
+}
+#qrlogout{
+	text-align: center;
+}
+.loginwith-cls{
+	text-align: center;
+	margin-bottom: 15px;
+}
+#qrlogout #qrlogout__dashboard_section_fsr span{
+	display: none;
+}
+#qrlogout #qrlogout__dashboard_section_fsr input{
+	margin-bottom: 20px;
+}
+
+@media (max-width: 380px){
+	#reader{
+		display: block !important;
+	}
+	#qrlogout{
+		display: block !important;
+	}
+}
+@media (min-width: 360px){
+	#reader #reader__dashboard_section a{
+		padding: 0.467rem 1.5rem;
+	}
+	#qrlogout #qrlogout__dashboard_section a{
+		padding: 0.467rem 1.5rem;
+	}
+}

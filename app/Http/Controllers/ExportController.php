@@ -26,6 +26,7 @@ use App\Http\Controllers\AttendanceController;
 use Config;
 use Carbon\Carbon;
 use App\Http\Models\AssignProductOrder;
+use Lang;
 
 class ExportController extends Controller
 {
@@ -285,7 +286,6 @@ class ExportController extends Controller
 
             $defaultColumnName = array(
                 'member_code' => __('languages.Attendance.Member_Code'),
-                // 'member_name' => __('languages.Attendance.Member_Name'),
                 'english_name' => __('languages.UserManagement.english_name'),
                 'chinese_name' => __('languages.UserManagement.chinese_name'),
                 'event_name' => __('languages.Attendance.Event_Name'),
@@ -371,7 +371,7 @@ class ExportController extends Controller
         if (!empty($AwardsMemberList)) {
             $rows = [];
             foreach ($AwardsMemberList as $awardMemberKey => $value) {
-                $rows[$awardMemberKey]['award_name'] = ($value->award->name_en) ? $value->award->name_en : '';
+                $rows[$awardMemberKey]['award_name'] = (Lang::getLocale() === 'en') ? $value->award->name_en : $value->award->name_ch;
                 // $rows[$awardMemberKey]['member_name'] = ($value->user->English_name) ? $value->user->English_name : '';
                 $rows[$awardMemberKey]['english_name'] = $value->user->English_name ?? '';
                 $rows[$awardMemberKey]['chinese_name'] = $value->user->Chinese_name ?? '';
@@ -864,7 +864,7 @@ class ExportController extends Controller
                 $rows[$orderKey]['order_id'] = !empty($value['order_id']) ? $value['order_id'] : '';
                 $rows[$orderKey]['product_code'] = !empty($value['product']['product_sku']) ? $value['product']['product_sku'] : '';
                 $rows[$orderKey]['product_name'] = !empty($value['product']['product_name']) ? $value['product']['product_name'] : '';
-                if(!empty($value['product']['childProducts'])){
+                if(!empty($value['product']['childProducts']->toArray())){
                     foreach($value['product']['childProducts'] as $childorderKey => $childProduct){
                         $rows[$orderKey]['option_code_and_option_name'] = !empty($childProduct['product_suffix'] && $childProduct['product_suffix_name']) ? $childProduct['product_suffix']. '+' .$childProduct['product_suffix_name'] : '';
                     }
@@ -1222,7 +1222,7 @@ class ExportController extends Controller
         if(!empty($badgeMemberList)){
             $rows = [];
             foreach ($badgeMemberList as $badgeMemberKey => $value) {
-                $rows[$badgeMemberKey]['badge_name'] = ($value['badge']['name_en']) ? $value['badge']['name_en'] : '';
+                $rows[$badgeMemberKey]['badge_name'] = (Lang::getLocale() === 'en') ? $value['badge']['name_en'] : $value['badge']['name_ch'];
                 // $rows[$badgeMemberKey]['member_name'] = ($value['user']['English_name']) ? $value['user']['English_name'] : '';
                 $rows[$badgeMemberKey]['english_name'] = $value['user']['English_name'] ?? '';
                 $rows[$badgeMemberKey]['chinese_name'] = $value['user']['Chinese_name'] ?? '';

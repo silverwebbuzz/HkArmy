@@ -83,6 +83,7 @@ return [
 	'product_suffix_code' =>'產品後綴代碼',
 	'name'	=> '姓名',
 	'export_qrcode'	=>'導出二維碼',
+	'export_member_qrcode'	=>'導出二維碼會員',
 	'select_status'=>'選擇狀態',
 	'search_by' => '搜索方式',
 	'change_password'=> '更改密碼',

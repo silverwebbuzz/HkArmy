@@ -658,7 +658,7 @@ function formatDate (input) {
 </script>
 
 <script>
-var ExportFieldColumnList = ['member_code','member_name','event_name','event_type','date','intime','outtime','total_event_hours','in_time_deducted_hour','out_time_deducted_hour','total_deducted_hour','hours'];
+var ExportFieldColumnList = ['member_code','english_name','chinese_name','event_name','event_type','date','intime','outtime','total_event_hours','in_time_deducted_hour','out_time_deducted_hour','total_deducted_hour','hours'];
 var EventAttendanceIds = [];
 $(function () {
     

@@ -418,7 +418,8 @@
 						</select>
 					</div>
 					<div class="multiple_status_member_section serach-member-btn">
-						<a href="javascript:void(0);" class="btn btn-primary btn-block glow mb-0 export-qrcodes-btn">{{ __('languages.export_qrcode')}}</a>
+						<a href="javascript:void(0);" class="btn btn-primary mb-0 member-export-csv" onclick="exportCSV()"> {{ __('languages.export_member_qrcode') }}</a>
+						<!-- <a href="javascript:void(0);" class="btn btn-primary btn-block glow mb-0 export-qrcodes-btn">{{ __('languages.export_qrcode')}}</a> -->
 						<a href="{{route('import-users')}}" class="btn btn-primary btn-block glow mb-0"> {{ __('languages.import') }} {{ __('languages.Member') }}</a>
 						<a href="{{asset('uploads\sample_files\member.csv')}}">
 							<button class="btn"><i class="bx bxs-download"></i>{{__('languages.download_sample_file')}}</button>
@@ -432,7 +433,6 @@
 						<div class="card-content">
 							<div class="card-body member-table-cls">
 								<div class="dt-buttons d-flex">
-									<a href="javascript:void(0);" class="btn btn-primary mb-0 member-export-csv" onclick="exportCSV()"> {{ __('languages.export') }}</a>
 								</div>
 								</br>
 								<div class="table-responsive event-search-list-cls">

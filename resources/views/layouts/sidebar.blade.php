@@ -106,7 +106,7 @@
             </li>
             @endif --}}
 
-            @if (in_array('award_assigned_member_list_read', $permissions))
+            @if (in_array('awards_management_read', $permissions))
             <li class="nav-item {{ (request()->is('award-assigned-member-list')) ? 'active': ''  }}">
                 <a href="{{ route('award-assigned-member-list') }}">
                     <i class="bx bx-trophy"></i>
@@ -115,7 +115,7 @@
             </li>
             @endif
 
-            @if (in_array('badge_assigned_member_list_read', $permissions))
+            @if (in_array('badges_management_read', $permissions))
             <li class="nav-item {{ (request()->is('badge-assigned-member-list')) ? 'active': ''  }}">
                 <a href="{{ route('badge-assigned-member-list') }}">
                     <i class="bx bx-badge-check"></i>

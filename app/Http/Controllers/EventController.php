@@ -914,6 +914,23 @@ class EventController extends Controller {
 		$events = Events::where('event_code', $eventid)->get();
 		$assignExisting = false;
 		foreach ($events as $val) {
+			$events_type = Events::with('eventType')->find($val->id)->toArray();
+			$events = Events::find($val->id);
+			$event_type = 'event_type_name_' . app()->getLocale();
+			$event_name = $events->event_name;
+			$event_type = $events_type['event_type'][$event_type];
+			$startdate = $events->startdate;
+			$enddate = $events->enddate;
+			$starttime = $events->start_time;
+			$endtime = $events->end_time;
+			/*if(empty($events->event_assign_user)){
+					$events->event_assign_user = implode(',', $assingUser);
+				}else{
+					array_push($assingUser,$events->event_assign_user);
+					$events->event_assign_user = implode(',', array_unique($assingUser));
+			*/
+			$result = $events->save();
+
 			if (!empty($assingUser)) {
 				foreach ($assingUser as $key => $user_id) {
 					// Check Event is already assign to users or not
@@ -934,6 +951,7 @@ class EventController extends Controller {
 									$assign->cost_type_id = !empty($request->posttypeId) ? $request->posttypeId : NULL;
 									$assign->save();
 									$id = $assign->id;
+									self::eventAssignLog($user_id, $id, $event_name, $event_type);
 
 									// Member used money
 									$MemberUsedMoney = new MemberUsedToken;
@@ -965,6 +983,7 @@ class EventController extends Controller {
 										$assign->cost_type_id = !empty($request->posttypeId) ? $request->posttypeId : NULL;
 										$assign->save();
 										$id = $assign->id;
+										self::eventAssignLog($user_id, $id, $event_name, $event_type);
 
 										// Member used token
 										$MemberUsedToken = new MemberUsedToken;
@@ -999,6 +1018,7 @@ class EventController extends Controller {
 										$assign->cost_type_id = !empty($request->posttypeId) ? $request->posttypeId : NULL;
 										$assign->save();
 										$id = $assign->id;
+										self::eventAssignLog($user_id, $id, $event_name, $event_type);
 
 										// Member used money + token
 										$MemberUsedMoneyToken = new MemberUsedToken;
@@ -1028,6 +1048,7 @@ class EventController extends Controller {
 								$assign->remark = !empty($request->remarks) ? $request->remarks : NULL;
 								$assign->save();
 								$id = $assign->id;
+								self::eventAssignLog($user_id, $id, $event_name, $event_type);
 								$assignExisting = true;
 							}
 						}
@@ -1036,23 +1057,6 @@ class EventController extends Controller {
 					}
 				}
 			}
-
-			$events_type = Events::with('eventType')->find($val->id)->toArray();
-			$events = Events::find($val->id);
-			$event_type = 'event_type_name_' . app()->getLocale();
-			$event_name = $events->event_name;
-			$event_type = $events_type['event_type'][$event_type];
-			$startdate = $events->startdate;
-			$enddate = $events->enddate;
-			$starttime = $events->start_time;
-			$endtime = $events->end_time;
-			/*if(empty($events->event_assign_user)){
-					$events->event_assign_user = implode(',', $assingUser);
-				}else{
-					array_push($assingUser,$events->event_assign_user);
-					$events->event_assign_user = implode(',', array_unique($assingUser));
-			*/
-			$result = $events->save();
 		}
 		try {
 			foreach ($assingUser as $val) {
@@ -1090,10 +1094,6 @@ class EventController extends Controller {
 				// 	$message->to($usersemail);
 				// });
 			}
-			$assignTo = User::find($user_id)->English_name;
-			$assignBy =  Session::get('user')['username'];
-			$getData =  ['Event' => $event_name, 'event_type' => $event_type, 'assign_to_user' => $assignTo, 'assign_by_user' => $assignBy];
-		    Helper::InsertAuditLogfuncation($getData, $id, 'EventAssign', 'Event');
 			if ($assignExisting) {
 				return response()->json(['status' => true, 'message' => "Assign User successfully."]);
 			} else {
@@ -1692,4 +1692,10 @@ class EventController extends Controller {
 
 	}
 
+	public static function eventAssignLog($user_id, $log_id, $event_name, $event_type) {
+		$assignTo = User::find($user_id)->English_name;
+		$assignBy =  Session::get('user')['username'];
+		$getData =  ['Event' => $event_name, 'event_type' => $event_type, 'assign_to_user' => $assignTo, 'assign_by_user' => $assignBy];
+		Helper::InsertAuditLogfuncation($getData, $log_id, 'EventAssign', 'Event');
+	}
 }

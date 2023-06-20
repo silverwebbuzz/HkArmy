@@ -1669,6 +1669,7 @@ span.pip .remove:hover {
 .member-table-cls .dt-buttons {
     width: 100%;
     display: inline-block;
+    margin-bottom: 30px;
 }
 
 /* Manoj Comented */
@@ -1702,6 +1703,26 @@ span.pip .remove:hover {
 
 .member-table-cls .dt-buttons .event_main_clss {
     margin-left: 5px;
+    display: flex;
+}
+
+#events_post_type {
+    position: absolute;
+    top: 60px;
+    left: 180px;
+}
+
+#remarksEvent {
+    position: absolute;
+    top: 60px;
+    left: 345px;
+    width: 145px;
+}
+
+#events_name {
+    position: absolute;
+    top: 60px;
+    left: 15px;
 }
 
 /*End Member list design*/
@@ -1825,8 +1846,6 @@ span.pip .remove:hover {
 @media (max-width: 1450px) {
     .users-list-table .event_main_clss {
         width: 100%;
-        margin-left: 0px !important;
-        padding-top: 10px;
         float: left !important;
     }
 }

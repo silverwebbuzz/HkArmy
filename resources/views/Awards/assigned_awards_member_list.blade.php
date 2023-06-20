@@ -345,6 +345,7 @@ function exportAwardAssignMember(){
 					var url = URL.createObjectURL(blobObject);
 					downloadLink.href = url;
 					downloadLink.download = "AwardAssignMember.csv";
+					exportHistroy('AwardAssignMember', url, fileData);
 
 					document.body.appendChild(downloadLink);
 					downloadLink.click();

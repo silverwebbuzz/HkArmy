@@ -83,6 +83,7 @@ return [
 	'product_suffix_code' =>'Product Suffix Code',
 	'name'	=> 'Name',
 	'export_qrcode'	=>'Export QRCode',
+	'export_member_qrcode'	=>'Export Member with QRCode',
 	'select_status'=>'Select Status',
 	'search_by' => 'Search By',
 	'change_password'=> 'Change Password',

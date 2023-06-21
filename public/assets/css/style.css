@@ -1706,6 +1706,25 @@ span.pip .remove:hover {
     display: flex;
 }
 
+#events_post_type {
+    position: absolute;
+    top: 60px;
+    left: 180px;
+}
+
+#remarksEvent {
+    position: absolute;
+    top: 60px;
+    left: 345px;
+    width: 145px;
+}
+
+#events_name {
+    position: absolute;
+    top: 60px;
+    left: 15px;
+}
+
 /*End Member list design*/
 
 /* Remark input */

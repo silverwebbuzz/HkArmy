@@ -433,7 +433,7 @@
 						<div class="card-content">
 							<div class="card-body member-table-cls">
 								<div class="dt-buttons d-flex mb-5">
-								</div>
+                </div>
 								</br>
 								<div class="table-responsive event-search-list-cls">
 									<table class="table member-list-table">
